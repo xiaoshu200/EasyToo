@@ -11,14 +11,13 @@
 #import "ShoppingCartViewController.h"
 #import "ShoppingUserViewController.h"
 
-@interface ShoppingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface ShoppingViewController : UIViewController
 {
     ShoppingMallViewController* _shoppingMallView;
     ShoppingCartViewController* _shoppingCartView;
     ShoppingUserViewController* _shoppingUserView;
     
-    UITextField* _SearchTextField;
-    NSString* _searchString;
     UITabBarController* _tabCtrl;
+
 }
 @end

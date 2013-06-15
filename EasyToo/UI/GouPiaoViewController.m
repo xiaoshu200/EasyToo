@@ -10,8 +10,9 @@
 #import "GouPiaoViewController.h"
 #import "SSQViewController.h"
 #import "FC3DViewController.h"
-#import "DaLeTouViewController.h"
-
+#import "DaLeTouViewController.h"   
+#import "SSQ2ViewController.h"
+#import "DaLeTou2ViewController.h"
 #define MINILABEL ((UILabel *)self.navigationItem.titleView)
 @interface GouPiaoViewController ()
 
@@ -39,18 +40,11 @@
     {
         [menuList addObject:[NSNumber numberWithInt:i]];
     }
-//    [self.tableView setEditing:YES animated:YES];
-    //   self.tableView.editing = YES;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	// this UIViewController is about to re-appear, make sure we remove the current selection in our table view
+	[self.fatherView.navigationItem setTitle:@"选择彩种"];
 	NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
 	[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
 }
@@ -116,91 +110,29 @@
  return NO;
  }
 
-
-
-// Override to support editing the table view.
-/*
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-}
-*/
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-    /*
-     SecondViewController *secondView = [[SecondViewController alloc] init];
-     
-     SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-     [self.navigationController pushViewController:secondView animated:YES];
-     */
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 0)
     {
-    SSQViewController *ssqView = [[SSQViewController alloc] init];
-    [self.navigationController pushViewController:ssqView animated:YES];
+    SSQ2ViewController *ssqView = [[SSQ2ViewController alloc] init];
+    [self.fatherView.navigationController pushViewController:ssqView animated:YES];
     //选中后的反显颜色即刻消失
     }
     else if(indexPath.section == 1)
     {
         FC3DViewController *fcView = [[FC3DViewController alloc] init];
-        [self.navigationController pushViewController:fcView animated:YES];
+        [self.fatherView.navigationController pushViewController:fcView animated:YES];
     }
     else
     {
-        DaLeTouViewController *daletouView = [[DaLeTouViewController alloc] init];
-        [self.navigationController pushViewController:daletouView animated:YES];
+        DaLeTou2ViewController *daletouView = [[DaLeTou2ViewController alloc] init];
+        [self.fatherView.navigationController pushViewController:daletouView animated:YES];
     }
     
-    
-    
-    /*
-    UITableViewCell *oneCell = [tableView cellForRowAtIndexPath: indexPath];
-    if (oneCell.accessoryType == UITableViewCellAccessoryNone) {
-        oneCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else
-        oneCell.accessoryType = UITableViewCellAccessoryNone;
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    */
-    /*
-    SecondViewController *secondView = [[SecondViewController alloc] init];
-    [self.navigationController pushViewController:secondView animated:YES];
-     */
-//    NSString *font = [[UIFont familyNames] objectAtIndex:indexPath.row];
- //   self.title = font;
-  //  [MINILABEL setText:font];
-  //  [MINILABEL setFont:[UIFont fontWithName:font size:18.0f]];
 }
 
 //改变行的高度

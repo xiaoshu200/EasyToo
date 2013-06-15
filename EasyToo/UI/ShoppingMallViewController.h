@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShoppingMallViewController : UIViewController
-
+@interface ShoppingMallViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+{
+    UITextField* _SearchTextField;
+    NSString* _searchString;
+    
+    NSArray *_titleDetail;
+    NSArray *_timeDetail;
+    NSArray *_contentDetail;
+    NSArray *_pictureDetail;
+}
 @end

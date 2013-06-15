@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ElecSaveVIew : UIView
+@interface ElecSaveVIew : UIView <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *titleDetail;
+@property (nonatomic, strong) NSArray *timeDetail;
+@property (nonatomic, strong) NSArray *contentDetail;
+@property (nonatomic, strong) NSArray *pictureDetail;
 
 @end

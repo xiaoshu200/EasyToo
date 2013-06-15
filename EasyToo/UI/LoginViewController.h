@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RegisterViewController.h"
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 

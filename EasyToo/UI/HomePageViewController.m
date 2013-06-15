@@ -75,11 +75,11 @@
 
 - (void)initIconArray
 {
-    _iconNameArray = [[NSArray alloc] initWithObjects:@"优惠券下载", @"彩票投注", @"城市黄页", @"Q币充值", @"网络游戏直冲", @"最新咨询", @"购物商城", @"电费代缴", @"车务代缴", @"景点票购买", @"演艺票购买", @"机票预定", @"手机话费充值", @"电影票", @"个人中心", nil];
+    _iconNameArray = [[NSArray alloc] initWithObjects:@"优惠券下载", @"彩票投注", @"城市黄页", @"Q币充值", @"网络游戏直充", @"最新咨询", @"购物商城", @"电费代缴", @"车务代缴", @"景点票购买", @"演艺票购买", @"机票预定", @"手机话费充值", @"电影票", @"个人中心", nil];
     
-    _iconImageNameArray = [[NSArray alloc] initWithObjects:@"coupon_logo", @"lottery_logo", @"cityyellow_logo", @"qq", @"geme", @"news_100", @"shop_logo", @"shuidianfei", @"car_logo", @"traveltickets_logo", @"concerttickets_logo", @"airline_line", @"recharge_logo", @"user_center", @"user_center", nil];
+    _iconImageNameArray = [[NSArray alloc] initWithObjects:@"coupon_logo", @"lottery_logo", @"cityyellow_logo", @"qq", @"geme", @"news_100", @"shop_logo", @"shuidianfei", @"car_logo", @"traveltickets_logo", @"concerttickets_logo", @"airline_line", @"concerttickets_logo", @"user_center", @"user_center", nil];
     
-    _iconViewCtrlArray = [[NSArray alloc] initWithObjects:@"", @"CaipiaoViewController", @"", @"QQChargeViewController", @"NetGameViewController", @"", @"ShoppingViewController", @"", @"CarBusinessViewController", @"", @"ConcertViewController", @"PlainViewController", @"MobileChargeViewController", @"", @"", nil];
+    _iconViewCtrlArray = [[NSArray alloc] initWithObjects:@"CouponViewController", @"CaipiaoViewController", @"YellowPageViewController", @"QQChargeViewController", @"NetGameViewController", @"NewsViewController", @"ShoppingViewController", @"ElectrolysisViewController", @"CarBusinessViewController", @"ToristTicketViewController", @"ConcertViewController", @"PlainViewController", @"MobileChargeViewController", @"MovieViewController", @"LoginViewController", nil];
 }
 
 - (void)initPageCtrl
@@ -100,20 +100,20 @@
 
 - (void)initTopBar
 {
-//    self.navigationBarHidden = YES;
+    //    self.navigationBarHidden = YES;
     
-//    UIImageView* topBar = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroud_title"]] autorelease];
-//    [topBar setContentMode:UIViewContentModeScaleToFill];
-//    [topBar setFrame:TOP_BAR_FRAME];
-//    [self.view addSubview:topBar];
-//    
-//    UILabel* title = [[[UILabel alloc] initWithFrame:TOP_BAR_TEXT_FRAME] autorelease];
-//    [title setText:@"一指通便利生活站"];
-//    [title setBackgroundColor:[UIColor clearColor]];
-//    [title setTextAlignment:NSTextAlignmentCenter];
-//    [title setTextColor:[UIColor whiteColor]];
-//    [title setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:18]];
-//    [self.view addSubview:title];
+    //    UIImageView* topBar = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroud_title"]] autorelease];
+    //    [topBar setContentMode:UIViewContentModeScaleToFill];
+    //    [topBar setFrame:TOP_BAR_FRAME];
+    //    [self.view addSubview:topBar];
+    //
+    //    UILabel* title = [[[UILabel alloc] initWithFrame:TOP_BAR_TEXT_FRAME] autorelease];
+    //    [title setText:@"一指通便利生活站"];
+    //    [title setBackgroundColor:[UIColor clearColor]];
+    //    [title setTextAlignment:NSTextAlignmentCenter];
+    //    [title setTextColor:[UIColor whiteColor]];
+    //    [title setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:18]];
+    //    [self.view addSubview:title];
     
     [self.navigationItem setTitle:@"一指通便利生活站"];
 }
@@ -125,11 +125,18 @@
     [titleBar setFrame:TITLE_BAR_FRAME];
     [self.view addSubview:titleBar];
     
-
+    UILabel* label = [[UILabel alloc] initWithFrame:TITLE_BAR_FRAME];
+    [label setText:@"共15款应用"];
+    [label setTextColor:[UIColor redColor]];
+    [label setTextAlignment:UITextAlignmentCenter];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:label];
+    
+    
 }
 
 - (void)initBottomBar
-{ 
+{
     UIImageView* bottomBar = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_bottom"]] autorelease];
     [bottomBar setContentMode:UIViewContentModeScaleToFill];
     [bottomBar setFrame:BOTTOM_BAR_FRAME];
@@ -163,7 +170,7 @@
 #pragma - MMGridViewDelegate
 
 - (void)gridView:(MMGridView *)gridView didSelectCell:(MMGridViewCell *)cell atIndex:(NSUInteger)index
-{    
+{
     UIViewController* subView = nil;
     if (index >= [_iconViewCtrlArray count])
     {
@@ -181,12 +188,12 @@
 
 - (void)gridView:(MMGridView *)gridView didDoubleTapCell:(MMGridViewCell *)cell atIndex:(NSUInteger)index
 {
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-//                                                    message:[NSString stringWithFormat:@"Cell at index %d was double tapped.", index]
-//                                                   delegate:nil
-//                                          cancelButtonTitle:@"Cool!"
-//                                          otherButtonTitles:nil];
-//    [alert show];
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+    //                                                    message:[NSString stringWithFormat:@"Cell at index %d was double tapped.", index]
+    //                                                   delegate:nil
+    //                                          cancelButtonTitle:@"Cool!"
+    //                                          otherButtonTitles:nil];
+    //    [alert show];
 }
 
 

@@ -41,7 +41,6 @@
     UILabel *nameLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 170, 50, 30)];
     nameLbl.text = @"用户名：";
     nameLbl.font = [UIFont boldSystemFontOfSize:35];
-    nameLbl.textAlignment = UITextAlignmentRight;
     nameLbl.adjustsFontSizeToFitWidth = YES;
     nameLbl.backgroundColor = [UIColor clearColor];
     
@@ -57,7 +56,6 @@
     UILabel *passwordLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 200, 50, 30)];
     passwordLbl.text = @"密  码：";
     passwordLbl.font = [UIFont boldSystemFontOfSize:35];
-    passwordLbl.textAlignment = UITextAlignmentRight;
     passwordLbl.adjustsFontSizeToFitWidth = YES;
     passwordLbl.backgroundColor = [UIColor clearColor];
     
@@ -72,7 +70,6 @@
     UILabel *mobileLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 230, 50, 30)];
     mobileLbl.text = @"手机号：";
     mobileLbl.font = [UIFont boldSystemFontOfSize:35];
-    mobileLbl.textAlignment = UITextAlignmentRight;
     mobileLbl.adjustsFontSizeToFitWidth = YES;
     mobileLbl.backgroundColor = [UIColor clearColor];
     
@@ -84,21 +81,22 @@
     [self.view addSubview:mobileTF];
     
     //找回密码
-    UILabel *passdescLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 270, 110, 30)];
+    UILabel *passdescLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 265, 180, 30)];
     passdescLbl.text = @"我已阅读并同意注册协议";
-    passdescLbl.font = [UIFont boldSystemFontOfSize:35];
-    passdescLbl.textAlignment = UITextAlignmentRight;
+    passdescLbl.font = [UIFont boldSystemFontOfSize:12];
     passdescLbl.adjustsFontSizeToFitWidth = YES;
     passdescLbl.backgroundColor = [UIColor clearColor];
+    passdescLbl.textColor = [UIColor grayColor];
+    [self.view addSubview:passdescLbl];
     
-    UIButton *getpassbacBtn = [[UIButton alloc]initWithFrame:CGRectMake(180, 270, 150, 20)];
-    [getpassbacBtn setTitle:@"注册协议" forState:UIControlStateNormal];
-    getpassbacBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [getpassbacBtn setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:getpassbacBtn];
+    UIButton *protocalBtn = [[UIButton alloc]initWithFrame:CGRectMake(180, 270, 150, 20)];
+    [protocalBtn setTitle:@"注册协议" forState:UIControlStateNormal];
+    protocalBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    [protocalBtn setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:protocalBtn];
     
     //添加button方法
-    [getpassbacBtn addTarget:self action:@selector(getpassbacEvent) forControlEvents:UIControlEventTouchUpInside];
+    [protocalBtn addTarget:self action:@selector(protocalEvent) forControlEvents:UIControlEventTouchUpInside];
     
     //注册
     UIButton *registerBtn = [[UIButton alloc]initWithFrame:CGRectMake(110, 300, 80, 30)];
@@ -120,6 +118,24 @@
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+//查看登录协议
+- (void)protocalEvent
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册协议" message:@"亲，来注册吧，送美女哦" delegate:self cancelButtonTitle:@"同意" otherButtonTitles:@"不同意", nil];
+    
+    [alert show];
+
+}
+
+//注册
+- (void)registerEvent
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册" message:nameTF.text delegate:self cancelButtonTitle:@"注册成功返回主界面" otherButtonTitles:@"重新注册一个新号", nil];
+    
+    [alert show];
+    
 }
 
 @end

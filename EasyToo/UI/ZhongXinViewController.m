@@ -47,6 +47,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	// this UIViewController is about to re-appear, make sure we remove the current selection in our table view
+    [self.fatherView.navigationItem setTitle:@"用户中心"];
+
 	NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
 	[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
 }

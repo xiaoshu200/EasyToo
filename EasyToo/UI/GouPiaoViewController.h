@@ -10,6 +10,8 @@
 
 @interface GouPiaoViewController : UITableViewController
 
+@property (nonatomic, assign) UIViewController* fatherView;
+
 @property (nonatomic,retain) NSMutableArray *menuList;
 
 @end

@@ -118,11 +118,17 @@
 //登录
 - (void)loginEvent
 {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录" message:nameTF.text delegate:self cancelButtonTitle:@"登录成功返回主界面" otherButtonTitles:@"换一个号登录", nil];
+    
+    [alert show];
 }
 
 //注册
 - (void)registerEvent
 {
+    RegisterViewController *registerView = [[RegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerView animated:YES];
+
 }
 
 @end

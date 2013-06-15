@@ -13,9 +13,6 @@
 @end
 
 @implementation PlainViewController
-{
-    UIDatePicker *datePicker;  
-}
 
 @synthesize startTF;
 @synthesize arriveTF;
@@ -31,6 +28,12 @@
     return self;
 }
 
+- (void)dealloc
+{
+    startTF = nil;
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,7 +46,7 @@
     UIImageView *startImage=[[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 17, 17)];
     [startImage setImage:[UIImage imageNamed:@"start_city.gif"]];
     
-    UILabel *startLbl = [[UILabel alloc]initWithFrame:CGRectMake(40, 10, 50, 50)];
+    UILabel *startLbl = [[[UILabel alloc]initWithFrame:CGRectMake(40, 10, 50, 50)] autorelease];
     startLbl.text = @"出发：";
     startLbl.font = [UIFont boldSystemFontOfSize:30];
     startLbl.textAlignment = UITextAlignmentCenter;
@@ -78,7 +81,7 @@
     [self.view addSubview:arriveTF];
     
     //航空公司
-    UILabel *companyLbl = [[UILabel alloc]initWithFrame:CGRectMake(20, 110, 70, 50)];
+    UILabel *companyLbl = [[[UILabel alloc]initWithFrame:CGRectMake(20, 110, 70, 50)] autorelease];
     companyLbl.text = @"航空公司：";
     companyLbl.font = [UIFont boldSystemFontOfSize:30];
     companyLbl.textAlignment = UITextAlignmentCenter;
@@ -100,12 +103,31 @@
     dateLbl.adjustsFontSizeToFitWidth = YES;
     
     dateTF = [[UITextField alloc] initWithFrame:CGRectMake(90, 160, 200, 30)];
-    dateTF.tag = 10001;
     [dateTF setBorderStyle:UITextBorderStyleBezel];
     [dateTF setDelegate:self];
     
     [self.view addSubview:dateLbl];
     [self.view addSubview:dateTF];
+    
+    // 建立 UIDatePicker
+    datePicker = [[UIDatePicker alloc]init];
+    // 時區的問題請再找其他協助 不是本篇重點
+    datelocale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
+    datePicker.locale = datelocale;
+    datePicker.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    // 以下這行是重點 (螢光筆畫兩行) 將 UITextField 的 inputView 設定成 UIDatePicker
+    // 則原本會跳出鍵盤的地方 就改成選日期了
+    dateTF.inputView = datePicker;
+    // 建立 UIToolbar
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    // 選取日期完成鈕 並給他一個 selector
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(cancelPicker)];
+    // 把按鈕加進 UIToolbar
+    toolBar.items = [NSArray arrayWithObject:right];
+    // 以下這行也是重點 (螢光筆畫兩行)
+    // 原本應該是鍵盤上方附帶內容的區塊 改成一個 UIToolbar 並加上完成鈕
+    dateTF.inputAccessoryView = toolBar;
     
     //查询
     UIButton *queryBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, 210, 260, 30)];
@@ -116,6 +138,20 @@
     //添加button方法
     [queryBtn addTarget:self action:@selector(queryEvent) forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+// 按下完成鈕後的 method
+-(void) cancelPicker {
+    // endEditing: 是結束編輯狀態的 method
+    if ([self.view endEditing:NO]) {
+        // 以下幾行是測試用 可以依照自己的需求增減屬性
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        NSString *dateFormat = [NSDateFormatter dateFormatFromTemplate:@"yyyy-MM-dd" options:0 locale:datelocale];
+        [formatter setDateFormat:dateFormat];
+        [formatter setLocale:datelocale];
+        // 將選取後的日期 填入 UITextField
+        dateTF.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:datePicker.date]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,16 +178,6 @@
     return YES;
 }
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    
-    //返回一个BOOL值，指定是否循序文本字段开始编辑
-    if (textField.tag == 10001)
-    {
-        NSLog(@"111111");
-    }
-    return YES;
-    
-}
 
 @end
 

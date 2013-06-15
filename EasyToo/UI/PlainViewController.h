@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TicketDetailViewController.h"
 
+
 @interface PlainViewController : UIViewController <UITextFieldDelegate>
+{
+    UIDatePicker *datePicker;
+    NSLocale *datelocale;
+}
 
 @property (nonatomic, strong) UITextField *startTF;
 @property (nonatomic, strong) UITextField *arriveTF;

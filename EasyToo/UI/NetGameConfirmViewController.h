@@ -10,4 +10,6 @@
 
 @interface NetGameConfirmViewController : UIViewController
 
+@property (retain,nonatomic) NSString *account;
+@property (nonatomic) int price;
 @end

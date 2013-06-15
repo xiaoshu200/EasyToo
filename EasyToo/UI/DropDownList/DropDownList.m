@@ -16,7 +16,7 @@
     if (self) {
         // Initialization code
         //默认的下拉列表中的数据
-        list=[[NSArray alloc]initWithObjects:@"50",@"100",@"300",@"500",nil];
+        list=[[NSArray alloc]initWithObjects:@"城市jb",@"草你大雨",@"300",@"500",nil];
         
         borderStyle=UITextBorderStyleRoundedRect;
         

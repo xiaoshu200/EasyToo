@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 @class DropDownList;
 
-@interface NetGameViewController : UIViewController<UITextFieldDelegate>
+@interface NetGameViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property (strong,nonatomic) DropDownList *gameType;
-@property (strong,nonatomic) DropDownList *cardType;
-@property (strong,nonatomic) DropDownList *label_num ;
-@property (strong,nonatomic) DropDownList *cardNum;
+{
+    NSArray *pickerArray;
+    UIPickerView *selectPicker;
+}
+@property (strong,nonatomic) UITextField *gameType;
+@property (strong,nonatomic) UITextField *cardType;
+@property (strong,nonatomic) UITextField *label_num ;
+@property (strong,nonatomic) UITextField *cardNum;
 @property (strong,nonatomic) UITextField *account;
 @property (strong,nonatomic) UITextField *account2;
 @end

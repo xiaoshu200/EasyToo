@@ -11,4 +11,7 @@
 @interface ZhongXinViewController : UITableViewController
 
 @property (nonatomic,retain) NSMutableArray *menuList;
+
+@property (nonatomic, assign) UIViewController* fatherView;
+
 @end

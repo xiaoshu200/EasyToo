@@ -7,6 +7,7 @@
 //
 
 #import "CaipiaoViewController.h"
+#import "DeviceUtil.h"
 
 @interface CaipiaoViewController ()
 
@@ -38,27 +39,17 @@
 - (void)initView
 {
     self.goupiao_nav = [[[GouPiaoViewController alloc] initWithStyle:UITableViewStyleGrouped ] autorelease];
+    self.goupiao_nav.fatherView = self;
 //    goupiaoView.title =@"选择彩种";
     
     self.dating_nav = [[[DatingViewController alloc] initWithStyle:UITableViewStyleGrouped]autorelease];
+    self.dating_nav.fatherView = self;
 //    datingView.title = @"开奖大厅";
     
     self.zhongxin_nav = [[[ZhongXinViewController alloc]initWithStyle:UITableViewStyleGrouped] autorelease];
+    self.zhongxin_nav.fatherView = self;
 //    zhongxinView.title = @"个人中心";
-    
-    [self.navigationController pushViewController:self.goupiao_nav animated:NO];
-        
-    /*使用图片设置导航栏
-     float version = [[[UIDevice currentDevice] systemVersion] floatValue];
-     UIImage *backgroundImage = [UIImage imageNamed:@"cp_top_bg.png"];
-     if (version >= 5.0) {
-     [self.goupiao_nav.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
-     }
-     else
-     {
-     [self.goupiao_nav.navigationBar insertSubview:[[UIImageView alloc] initWithImage:backgroundImage] atIndex:1];
-     }
-     */
+//    
     NSArray *controllerArray =[[NSArray alloc]initWithObjects:self.goupiao_nav,self.dating_nav,self.zhongxin_nav,nil];
     self.tbc = [[[UITabBarController alloc]init] autorelease];
     
@@ -75,6 +66,8 @@
     
     [[self.tbc.tabBar.items objectAtIndex:2] setTitle:@"个人中心"];
     [[self.tbc.tabBar.items objectAtIndex:2] setImage:[UIImage imageNamed:@"cp_zhongxin.png"]];
+    
+    [self.tbc.tabBar setFrame:CGRectMake(0, 400, [DeviceUtil getScreenWidth], 60)];
     [self.view addSubview:self.tbc.view];
 }
 

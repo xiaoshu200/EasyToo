@@ -205,14 +205,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (indexPath.row != 0)
+    {
+        UIActionSheet* mySheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"请选择价位"
+                                  delegate:self
+                                  cancelButtonTitle:@"返回"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"1750元（全价头等舱/Y）", @"4380元（头等舱/F）",nil];
+        [mySheet showInView:self.view];
+    }
 }
+
 
 @end
