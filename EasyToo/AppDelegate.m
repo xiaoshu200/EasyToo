@@ -16,6 +16,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self initHomePageView];
     return YES;
 }
 
@@ -45,5 +47,18 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)initHomePageView
+{
+    HomePageViewController* myHomePageView = [[HomePageViewController alloc] init];
+    
+    self.navigationCtrl = [[UINavigationController alloc] initWithRootViewController:myHomePageView];
+    
+    self.window.rootViewController = self.navigationCtrl;
+    [myHomePageView release];
+    
+    [self.navigationCtrl.navigationBar setTintColor:[UIColor redColor]];
+}
+
 
 @end
