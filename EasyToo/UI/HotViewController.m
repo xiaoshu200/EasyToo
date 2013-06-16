@@ -27,14 +27,6 @@
 
 -(id)init
 {
-    printf("1111\n");
-
-    NSArray* listArray = [NSArray arrayWithObjects:@"所有分类",@"餐饮美食",@"逛街购物",@"生活服务",@"教育培训",@"其它类别" ,nil];
-////    _Category = [[DropDownList alloc] initWithFrame:CGRectMake(25, 60,120, 30) listArray:listArray];
-////    [_Category  setBorderStyle:UITextBorderStyleBezel];
-//    
-//    _moveType = [[DropDownList alloc] initWithFrame:CGRectMake(170, 60, 120, 30)];
-//    [_moveType  setBorderStyle:UITextBorderStyleBezel];
     return [super init];
 }
 - (void)viewDidLoad
