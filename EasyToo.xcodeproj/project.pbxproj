@@ -341,14 +341,10 @@
 		DC37166F17674CDE005C1B06 /* TicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37166C17674CDE005C1B06 /* TicketDetailViewController.m */; };
 		DC37167817674D38005C1B06 /* ConcertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167417674D38005C1B06 /* ConcertViewController.m */; };
 		DC37167917674D38005C1B06 /* yanchangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167617674D38005C1B06 /* yanchangViewController.m */; };
-		DC37168917674E6E005C1B06 /* DaLeTouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167B17674E6E005C1B06 /* DaLeTouViewController.m */; };
-		DC37168A17674E6E005C1B06 /* DaLeTouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37167C17674E6E005C1B06 /* DaLeTouViewController.xib */; };
 		DC37168B17674E6E005C1B06 /* DatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167E17674E6E005C1B06 /* DatingViewController.m */; };
 		DC37168C17674E6E005C1B06 /* FC3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168017674E6E005C1B06 /* FC3DViewController.m */; };
 		DC37168D17674E6E005C1B06 /* FC3DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37168117674E6E005C1B06 /* FC3DViewController.xib */; };
 		DC37168E17674E6E005C1B06 /* GouPiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168317674E6E005C1B06 /* GouPiaoViewController.m */; };
-		DC37168F17674E6E005C1B06 /* SSQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168517674E6E005C1B06 /* SSQViewController.m */; };
-		DC37169017674E6E005C1B06 /* SSQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37168617674E6E005C1B06 /* SSQViewController.xib */; };
 		DC37169117674E6E005C1B06 /* ZhongXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168817674E6E005C1B06 /* ZhongXinViewController.m */; };
 		DC37169417674E93005C1B06 /* CaipiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37169317674E93005C1B06 /* CaipiaoViewController.m */; };
 		DC37169A17675A52005C1B06 /* ConfirmMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37169717675A52005C1B06 /* ConfirmMessageViewController.m */; };
@@ -751,9 +747,6 @@
 		DC37167417674D38005C1B06 /* ConcertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcertViewController.m; sourceTree = "<group>"; };
 		DC37167517674D38005C1B06 /* yanchangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yanchangViewController.h; sourceTree = "<group>"; };
 		DC37167617674D38005C1B06 /* yanchangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yanchangViewController.m; sourceTree = "<group>"; };
-		DC37167A17674E6E005C1B06 /* DaLeTouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaLeTouViewController.h; sourceTree = "<group>"; };
-		DC37167B17674E6E005C1B06 /* DaLeTouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaLeTouViewController.m; sourceTree = "<group>"; };
-		DC37167C17674E6E005C1B06 /* DaLeTouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaLeTouViewController.xib; sourceTree = "<group>"; };
 		DC37167D17674E6E005C1B06 /* DatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatingViewController.h; sourceTree = "<group>"; };
 		DC37167E17674E6E005C1B06 /* DatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatingViewController.m; sourceTree = "<group>"; };
 		DC37167F17674E6E005C1B06 /* FC3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FC3DViewController.h; sourceTree = "<group>"; };
@@ -761,9 +754,6 @@
 		DC37168117674E6E005C1B06 /* FC3DViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FC3DViewController.xib; sourceTree = "<group>"; };
 		DC37168217674E6E005C1B06 /* GouPiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GouPiaoViewController.h; sourceTree = "<group>"; };
 		DC37168317674E6E005C1B06 /* GouPiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GouPiaoViewController.m; sourceTree = "<group>"; };
-		DC37168417674E6E005C1B06 /* SSQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSQViewController.h; sourceTree = "<group>"; };
-		DC37168517674E6E005C1B06 /* SSQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSQViewController.m; sourceTree = "<group>"; };
-		DC37168617674E6E005C1B06 /* SSQViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSQViewController.xib; sourceTree = "<group>"; };
 		DC37168717674E6E005C1B06 /* ZhongXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhongXinViewController.h; sourceTree = "<group>"; };
 		DC37168817674E6E005C1B06 /* ZhongXinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhongXinViewController.m; sourceTree = "<group>"; };
 		DC37169217674E93005C1B06 /* CaipiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaipiaoViewController.h; sourceTree = "<group>"; };
@@ -1320,9 +1310,6 @@
 		DC37164417674374005C1B06 /* Caipiao */ = {
 			isa = PBXGroup;
 			children = (
-				DC37167A17674E6E005C1B06 /* DaLeTouViewController.h */,
-				DC37167B17674E6E005C1B06 /* DaLeTouViewController.m */,
-				DC37167C17674E6E005C1B06 /* DaLeTouViewController.xib */,
 				19F040FC176C79FE00FC796C /* DaLeTou2ViewController.h */,
 				19F040FD176C79FE00FC796C /* DaLeTou2ViewController.m */,
 				DC37167D17674E6E005C1B06 /* DatingViewController.h */,
@@ -1332,11 +1319,8 @@
 				DC37168117674E6E005C1B06 /* FC3DViewController.xib */,
 				DC37168217674E6E005C1B06 /* GouPiaoViewController.h */,
 				DC37168317674E6E005C1B06 /* GouPiaoViewController.m */,
-				DC37168417674E6E005C1B06 /* SSQViewController.h */,
-				DC37168517674E6E005C1B06 /* SSQViewController.m */,
 				1935DD64176B823500D5CC0D /* SSQ2ViewController.h */,
 				1935DD65176B823600D5CC0D /* SSQ2ViewController.m */,
-				DC37168617674E6E005C1B06 /* SSQViewController.xib */,
 				DC37168717674E6E005C1B06 /* ZhongXinViewController.h */,
 				DC37168817674E6E005C1B06 /* ZhongXinViewController.m */,
 				DC37169217674E93005C1B06 /* CaipiaoViewController.h */,
@@ -1878,9 +1862,7 @@
 				DC371640176741EF005C1B06 /* zfb.png in Resources */,
 				DC371641176741EF005C1B06 /* zfbpay.png in Resources */,
 				DC371642176741EF005C1B06 /* zhong.png in Resources */,
-				DC37168A17674E6E005C1B06 /* DaLeTouViewController.xib in Resources */,
 				DC37168D17674E6E005C1B06 /* FC3DViewController.xib in Resources */,
-				DC37169017674E6E005C1B06 /* SSQViewController.xib in Resources */,
 				DC3716AE176760E9005C1B06 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1914,11 +1896,9 @@
 				DC37166F17674CDE005C1B06 /* TicketDetailViewController.m in Sources */,
 				DC37167817674D38005C1B06 /* ConcertViewController.m in Sources */,
 				DC37167917674D38005C1B06 /* yanchangViewController.m in Sources */,
-				DC37168917674E6E005C1B06 /* DaLeTouViewController.m in Sources */,
 				DC37168B17674E6E005C1B06 /* DatingViewController.m in Sources */,
 				DC37168C17674E6E005C1B06 /* FC3DViewController.m in Sources */,
 				DC37168E17674E6E005C1B06 /* GouPiaoViewController.m in Sources */,
-				DC37168F17674E6E005C1B06 /* SSQViewController.m in Sources */,
 				DC37169117674E6E005C1B06 /* ZhongXinViewController.m in Sources */,
 				DC37169417674E93005C1B06 /* CaipiaoViewController.m in Sources */,
 				DC37169A17675A52005C1B06 /* ConfirmMessageViewController.m in Sources */,

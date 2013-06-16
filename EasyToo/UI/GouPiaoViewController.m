@@ -8,9 +8,7 @@
 
 
 #import "GouPiaoViewController.h"
-#import "SSQViewController.h"
 #import "FC3DViewController.h"
-#import "DaLeTouViewController.h"   
 #import "SSQ2ViewController.h"
 #import "DaLeTou2ViewController.h"
 #define MINILABEL ((UILabel *)self.navigationItem.titleView)
