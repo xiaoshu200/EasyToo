@@ -10,9 +10,6 @@
 #import "DropDownList.h"
 @interface HotViewController : UIViewController <UITextFieldDelegate>
 {
-    DropDownList *_Category;
-    DropDownList *_moveType;
-    
     UITextField* _SearchTextField;
     NSString* _searchString;
 }

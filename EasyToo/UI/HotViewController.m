@@ -31,10 +31,7 @@
 }
 - (void)viewDidLoad
 {
-    printf("222222\n");
     [super viewDidLoad];
-    
-    [self initDropList];
     [self initTopBar];
     [self initTableView];
 	// Do any additional setup after loading the view.
@@ -70,15 +67,6 @@
     [self.view addSubview:houseView];
 }
 
-- (void)initDropList
-{
-  //  [_Category.list alloc] initWithObjects:@"所有分类",@"餐饮美食",@"逛街购物",@"生活服务",@"教育培训",@"其它类别" ,nil]];
-  //  [[_moveType.list alloc] initWithObjects:@"滚动模式",@"列表模式", nil];
-    
- //   [_Category.list arrayByAddingObject:@"11111"];
-    [self.view addSubview:_Category];
-    [self.view addSubview:_moveType];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
