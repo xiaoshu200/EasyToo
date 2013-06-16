@@ -119,7 +119,7 @@
     while (red_num<MAX_RED_NUM) {
         
         m_button = [UIButton buttonWithType:UIButtonTypeCustom];
-        m_button.frame = CGRectMake(20+(red_num%7)*50, (red_num/7)*40+30, 40, 40);
+        m_button.frame = CGRectMake(20+(red_num%7)*40, (red_num/7)*40+30, 40, 40);
         m_button.tag=red_num+1;
         // Set the font and color
         [m_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -144,7 +144,7 @@
     while (blue_num<MAX_BULE_NUM) {
         
         m_button = [UIButton buttonWithType:UIButtonTypeCustom];
-        m_button.frame = CGRectMake(20+(blue_num%7)*50, (blue_num/7)*40+(red_num/7)*40+80, 40, 40);
+        m_button.frame = CGRectMake(20+(blue_num%7)*40, (blue_num/7)*40+(red_num/7)*40+80, 40, 40);
         m_button.tag=blue_num+1;
         // Set the font and color
         [m_button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
