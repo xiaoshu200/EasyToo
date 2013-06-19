@@ -8,7 +8,7 @@
 
 
 #import "GouPiaoViewController.h"
-#import "FC3DViewController.h"
+#import "FC3D2ViewController.h"
 #import "SSQ2ViewController.h"
 #import "DaLeTou2ViewController.h"
 #define MINILABEL ((UILabel *)self.navigationItem.titleView)
@@ -122,7 +122,7 @@
     }
     else if(indexPath.section == 1)
     {
-        FC3DViewController *fcView = [[FC3DViewController alloc] init];
+        FC3D2ViewController *fcView = [[FC3D2ViewController alloc] init];
         [self.fatherView.navigationController pushViewController:fcView animated:YES];
     }
     else

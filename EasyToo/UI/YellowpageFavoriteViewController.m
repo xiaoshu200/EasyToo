@@ -27,12 +27,13 @@
 {
     [super viewDidLoad];
     [self initButton];
-      [self initTableView];
+    [self initTableView];
 	// Do any additional setup after loading the view.
 }
 
 -(void)initButton
 {
+    /*
     UIButton *_btnDish = [[UIButton alloc] initWithFrame:CGRectMake(120, 0, 100, 40)];
     [_btnDish setBackgroundImage:[UIImage imageNamed:@"buttonup"] forState:UIControlStateNormal];
     [self.view addSubview:_btnDish];
@@ -43,6 +44,10 @@
     label_dish.textAlignment = UITextAlignmentCenter;
     label_dish.adjustsFontSizeToFitWidth = YES;
     [_btnDish addSubview:label_dish];
+     */
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
+    rightButton.enabled= TRUE;
+ //   self.navigationItem.rightBarButtonItem = rightButton;
 }
 - (void)initTableView
 {

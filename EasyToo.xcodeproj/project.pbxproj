@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192AE39E17709C3F00958E38 /* FC3D2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 192AE39D17709C3F00958E38 /* FC3D2ViewController.m */; };
 		1935DD66176B823700D5CC0D /* SSQ2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1935DD65176B823600D5CC0D /* SSQ2ViewController.m */; };
 		19F040FE176C79FF00FC796C /* DaLeTou2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F040FD176C79FE00FC796C /* DaLeTou2ViewController.m */; };
 		19F04100176C96BA00FC796C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F040FF176C96B900FC796C /* AudioToolbox.framework */; };
@@ -342,8 +343,6 @@
 		DC37167817674D38005C1B06 /* ConcertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167417674D38005C1B06 /* ConcertViewController.m */; };
 		DC37167917674D38005C1B06 /* yanchangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167617674D38005C1B06 /* yanchangViewController.m */; };
 		DC37168B17674E6E005C1B06 /* DatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37167E17674E6E005C1B06 /* DatingViewController.m */; };
-		DC37168C17674E6E005C1B06 /* FC3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168017674E6E005C1B06 /* FC3DViewController.m */; };
-		DC37168D17674E6E005C1B06 /* FC3DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC37168117674E6E005C1B06 /* FC3DViewController.xib */; };
 		DC37168E17674E6E005C1B06 /* GouPiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168317674E6E005C1B06 /* GouPiaoViewController.m */; };
 		DC37169117674E6E005C1B06 /* ZhongXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37168817674E6E005C1B06 /* ZhongXinViewController.m */; };
 		DC37169417674E93005C1B06 /* CaipiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC37169317674E93005C1B06 /* CaipiaoViewController.m */; };
@@ -387,6 +386,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192AE39C17709C3F00958E38 /* FC3D2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FC3D2ViewController.h; sourceTree = "<group>"; };
+		192AE39D17709C3F00958E38 /* FC3D2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FC3D2ViewController.m; sourceTree = "<group>"; };
 		1935DD64176B823500D5CC0D /* SSQ2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSQ2ViewController.h; sourceTree = "<group>"; };
 		1935DD65176B823600D5CC0D /* SSQ2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSQ2ViewController.m; sourceTree = "<group>"; };
 		19F040FC176C79FE00FC796C /* DaLeTou2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaLeTou2ViewController.h; sourceTree = "<group>"; };
@@ -749,9 +750,6 @@
 		DC37167617674D38005C1B06 /* yanchangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yanchangViewController.m; sourceTree = "<group>"; };
 		DC37167D17674E6E005C1B06 /* DatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatingViewController.h; sourceTree = "<group>"; };
 		DC37167E17674E6E005C1B06 /* DatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatingViewController.m; sourceTree = "<group>"; };
-		DC37167F17674E6E005C1B06 /* FC3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FC3DViewController.h; sourceTree = "<group>"; };
-		DC37168017674E6E005C1B06 /* FC3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FC3DViewController.m; sourceTree = "<group>"; };
-		DC37168117674E6E005C1B06 /* FC3DViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FC3DViewController.xib; sourceTree = "<group>"; };
 		DC37168217674E6E005C1B06 /* GouPiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GouPiaoViewController.h; sourceTree = "<group>"; };
 		DC37168317674E6E005C1B06 /* GouPiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GouPiaoViewController.m; sourceTree = "<group>"; };
 		DC37168717674E6E005C1B06 /* ZhongXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhongXinViewController.h; sourceTree = "<group>"; };
@@ -1312,11 +1310,10 @@
 			children = (
 				19F040FC176C79FE00FC796C /* DaLeTou2ViewController.h */,
 				19F040FD176C79FE00FC796C /* DaLeTou2ViewController.m */,
+				192AE39C17709C3F00958E38 /* FC3D2ViewController.h */,
+				192AE39D17709C3F00958E38 /* FC3D2ViewController.m */,
 				DC37167D17674E6E005C1B06 /* DatingViewController.h */,
 				DC37167E17674E6E005C1B06 /* DatingViewController.m */,
-				DC37167F17674E6E005C1B06 /* FC3DViewController.h */,
-				DC37168017674E6E005C1B06 /* FC3DViewController.m */,
-				DC37168117674E6E005C1B06 /* FC3DViewController.xib */,
 				DC37168217674E6E005C1B06 /* GouPiaoViewController.h */,
 				DC37168317674E6E005C1B06 /* GouPiaoViewController.m */,
 				1935DD64176B823500D5CC0D /* SSQ2ViewController.h */,
@@ -1862,7 +1859,6 @@
 				DC371640176741EF005C1B06 /* zfb.png in Resources */,
 				DC371641176741EF005C1B06 /* zfbpay.png in Resources */,
 				DC371642176741EF005C1B06 /* zhong.png in Resources */,
-				DC37168D17674E6E005C1B06 /* FC3DViewController.xib in Resources */,
 				DC3716AE176760E9005C1B06 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1897,7 +1893,6 @@
 				DC37167817674D38005C1B06 /* ConcertViewController.m in Sources */,
 				DC37167917674D38005C1B06 /* yanchangViewController.m in Sources */,
 				DC37168B17674E6E005C1B06 /* DatingViewController.m in Sources */,
-				DC37168C17674E6E005C1B06 /* FC3DViewController.m in Sources */,
 				DC37168E17674E6E005C1B06 /* GouPiaoViewController.m in Sources */,
 				DC37169117674E6E005C1B06 /* ZhongXinViewController.m in Sources */,
 				DC37169417674E93005C1B06 /* CaipiaoViewController.m in Sources */,
@@ -1939,6 +1934,7 @@
 				DCD1B2FD17682B2E00FA4503 /* YellowPageViewController.m in Sources */,
 				1935DD66176B823700D5CC0D /* SSQ2ViewController.m in Sources */,
 				19F040FE176C79FF00FC796C /* DaLeTou2ViewController.m in Sources */,
+				192AE39E17709C3F00958E38 /* FC3D2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

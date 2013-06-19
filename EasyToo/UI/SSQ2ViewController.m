@@ -176,6 +176,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark shark delegate
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 
 {

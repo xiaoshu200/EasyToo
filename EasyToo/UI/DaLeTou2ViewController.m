@@ -7,6 +7,7 @@
 //
 
 #import "DaLeTou2ViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface DaLeTou2ViewController ()
 
@@ -32,6 +33,8 @@
     [self initButton];
     [self initToolBar];
 	// Do any additional setup after loading the view.
+    [self becomeFirstResponder]; // for shaking
+
 }
 
 -(void) initToolBar
@@ -163,6 +166,49 @@
 {
     UIButton *button = (UIButton *)sender;
     button.selected = !button.selected;
+    
+}
+
+#pragma mark shark delegate
+
+- (BOOL) canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    
+    //检测到摇动
+    printf("shaking begin!\n");
+}
+
+
+
+- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    
+    //摇动取消
+    
+}
+
+
+
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    
+    //摇动结束
+    
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        
+        //something happens
+        printf("shaking end!\n");
+        _toolbarLabel.text = [NSString stringWithFormat:@"别摇我"];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
     
 }
 - (void)didReceiveMemoryWarning
