@@ -27,37 +27,37 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UILabel *label_message = [[UILabel alloc] initWithFrame:CGRectMake(130, 20, 150, 30)];
+    UILabel *label_message = [[[UILabel alloc] initWithFrame:CGRectMake(130, 20, 150, 30)]autorelease];
     label_message.text = @"信息确认";
     [self.view addSubview:label_message];
     
     
-    UILabel *label_account = [[UILabel alloc] initWithFrame:CGRectMake(50, 60, 250, 30)];
+    UILabel *label_account = [[[UILabel alloc] initWithFrame:CGRectMake(50, 60, 250, 30)] autorelease];
     [label_account setText:[NSString stringWithFormat:@"QQ帐号:%@",self.account]];
     [self.view addSubview:label_account];
     
     
-    UILabel *label_count = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 250, 30)];
+    UILabel *label_count = [[[UILabel alloc] initWithFrame:CGRectMake(50, 100, 250, 30)]autorelease];
     [label_count setText:[NSString stringWithFormat:@"购买个数:%d",self.price]];
     [self.view addSubview:label_count];
     
-    UILabel *label_price = [[UILabel alloc] initWithFrame:CGRectMake(50, 140, 250, 30)];
+    UILabel *label_price = [[[UILabel alloc] initWithFrame:CGRectMake(50, 140, 250, 30)]autorelease];
     [label_price setText:[NSString stringWithFormat:@"支付金额:%d元",self.price]];
     [self.view addSubview:label_price];
     
-    UILabel *label_pay = [[UILabel alloc] initWithFrame:CGRectMake(50, 180, 250, 30)];
+    UILabel *label_pay = [[[UILabel alloc] initWithFrame:CGRectMake(50, 180, 250, 30)]autorelease];
     label_pay.text = @"支付方式:";
     [self.view addSubview:label_pay];
     
-    UIButton *zfbButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 220, 100, 30)];
+    UIButton *zfbButton = [[[UIButton alloc] initWithFrame:CGRectMake(30, 220, 100, 30)]autorelease];
     [zfbButton setBackgroundImage:[UIImage imageNamed:@"zfb"] forState:UIControlStateNormal];
     [self.view addSubview:zfbButton];
     
-    UIButton *ybButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 220, 100, 30)];
+    UIButton *ybButton = [[[UIButton alloc] initWithFrame:CGRectMake(200, 220, 100, 30)]autorelease];
     [ybButton setBackgroundImage:[UIImage imageNamed:@"yibao"] forState:UIControlStateNormal];
     [self.view addSubview:ybButton];
     
-    UIButton *confirmButton = [[UIButton alloc] initWithFrame:CGRectMake(120, 260, 100, 30)];
+    UIButton *confirmButton = [[[UIButton alloc] initWithFrame:CGRectMake(120, 260, 100, 30)]autorelease];
     [confirmButton setBackgroundImage:[UIImage imageNamed:@"shop_confirmandpay"] forState:UIControlStateNormal];
     [confirmButton addTarget:self action:@selector(confirmPay:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:confirmButton];

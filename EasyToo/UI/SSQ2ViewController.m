@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    [self.navigationItem setTitle:@"双色球"];
     [super viewDidLoad];
     _red_btnArray = [[NSMutableArray alloc]init];
     _blue_btnArray = [[NSMutableArray alloc]init];
@@ -41,25 +42,25 @@
 
 -(void) initToolBar
 {
-    _myToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 375, 320, 44)];
+    _myToolbar = [[[UIToolbar alloc] initWithFrame:CGRectMake(0, 375, 320, 44)]autorelease];
 	_myToolbar.barStyle = UIBarStyleBlackOpaque;
     _toolbarArray = [[NSMutableArray alloc] init];
     [_toolbarArray addObject:[[UIBarButtonItem alloc] initWithTitle:@"清空" style:UIBarButtonItemStyleDone target:self action:@selector(onClickCancle:)]];
     
     
-    _toolbarLabel = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 200.0f, 30.0f)];
+    _toolbarLabel = [[[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 200.0f, 30.0f)]autorelease];
     _toolbarLabel.font=[UIFont systemFontOfSize:16];
     _toolbarLabel.backgroundColor = [UIColor clearColor];
     _toolbarLabel.textAlignment=NSTextAlignmentCenter;
     _toolbarLabel.text  = @"共0注 0元";
     _toolbarLabel.textColor = [UIColor whiteColor];
-    UIBarButtonItem *myButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel];
+    UIBarButtonItem *myButtonItem = [[[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel]autorelease];
     
     [_toolbarArray addObject: myButtonItem]; //添加文本
     // flex item used to separate the left groups items and right grouped items
-	UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+	UIBarButtonItem *flexItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                               target:nil
-                                                                              action:nil];
+                                                                              action:nil]autorelease];
     [_toolbarArray addObject:flexItem];
     [_toolbarArray addObject:[[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(onClickConfirm:)]];
     
@@ -96,13 +97,13 @@
 
 -(void) initLable
 {
-    tips = [[UILabel alloc] initWithFrame:CGRectMake(150, 0, 170, 30)];
+    tips = [[[UILabel alloc] initWithFrame:CGRectMake(150, 0, 170, 30)]autorelease];
     tips.text =  @"至少选择6个红球,1个蓝球";
     tips.font = [UIFont boldSystemFontOfSize:12.0f];  //UILabel的字体大小
     tips.textAlignment = NSTextAlignmentLeft;  //文本对齐方式
     [self.view addSubview:tips];
     
-    UILabel *tips2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    UILabel *tips2 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 30)]autorelease];
     tips2.text =  @"摇一摇机选";
     tips2.font = [UIFont boldSystemFontOfSize:12.0f];  //UILabel的字体大小
     tips2.textAlignment = NSTextAlignmentCenter;  //文本对齐方式

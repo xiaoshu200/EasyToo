@@ -25,10 +25,10 @@
 
 -(id) init
 {
-    _firstView = [[YellowpageFirstPageViewController alloc] init];
-    _aroundView = [[YellowpageAroundViewController alloc] init];
-    _favoriteView = [[YellowpageFavoriteViewController alloc] init];
-    _unuseView = [[YellowpageFavoriteViewController alloc] init];
+    _firstView = [[[YellowpageFirstPageViewController alloc] init]autorelease];
+    _aroundView = [[[YellowpageAroundViewController alloc] init]autorelease];
+    _favoriteView = [[[YellowpageFavoriteViewController alloc] init]autorelease];
+    _unuseView = [[[YellowpageFavoriteViewController alloc] init]autorelease];
     
     return [super init];
 }
@@ -64,8 +64,8 @@
 
 - (void)initTabBar
 {
-    NSArray *controllerArray =[[NSArray alloc]initWithObjects:_firstView, _aroundView, _favoriteView,_unuseView,nil];
-    _tabCtrl = [[UITabBarController alloc] init];
+    NSArray *controllerArray =[[[NSArray alloc]initWithObjects:_firstView, _aroundView, _favoriteView,_unuseView,nil]autorelease];
+    _tabCtrl = [[[UITabBarController alloc] init]autorelease];
     
     _tabCtrl.viewControllers = controllerArray;
     

@@ -150,16 +150,19 @@
             [self addZhiXuanView];
             [self removeZuSanView];
             [self removeZuLiuView];
+            [self.navigationItem setTitle:@"3D直选"];
             break;
         case 1:
             [self addZuSanView];
             [self removeZhiXuanView];
             [self removeZuLiuView];
+            [self.navigationItem setTitle:@"3D组三"];
             break;
         case 2:
             [self addZuLiuView];
             [self removeZhiXuanView];
             [self removeZuSanView];
+            [self.navigationItem setTitle:@"3D组六"];
             break;
         default:
             break;

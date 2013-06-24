@@ -74,7 +74,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier]autorelease];
     }
     
     // Configure the cell...
@@ -116,18 +116,18 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 0)
     {
-    SSQ2ViewController *ssqView = [[SSQ2ViewController alloc] init];
+    SSQ2ViewController *ssqView = [[[SSQ2ViewController alloc] init]autorelease];
     [self.fatherView.navigationController pushViewController:ssqView animated:YES];
     //选中后的反显颜色即刻消失
     }
     else if(indexPath.section == 1)
     {
-        FC3D2ViewController *fcView = [[FC3D2ViewController alloc] init];
+        FC3D2ViewController *fcView = [[[FC3D2ViewController alloc] init]autorelease];
         [self.fatherView.navigationController pushViewController:fcView animated:YES];
     }
     else
     {
-        DaLeTou2ViewController *daletouView = [[DaLeTou2ViewController alloc] init];
+        DaLeTou2ViewController *daletouView = [[[DaLeTou2ViewController alloc] init]autorelease];
         [self.fatherView.navigationController pushViewController:daletouView animated:YES];
     }
     

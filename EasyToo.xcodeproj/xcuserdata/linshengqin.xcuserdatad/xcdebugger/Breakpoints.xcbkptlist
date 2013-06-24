@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EasyToo/UI/SSQ2ViewController.m"
-         timestampString = "392990080.579251"
+         timestampString = "393774811.973889"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "46"
-         endingLineNumber = "46"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
          landmarkName = "-initToolBar"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EasyToo/UI/SSQ2ViewController.m"
-         timestampString = "392989660.093129"
+         timestampString = "393774811.973889"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EasyToo/UI/SSQ2ViewController.m"
-         timestampString = "393293773.107978"
+         timestampString = "393774811.973889"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
+         startingLineNumber = "207"
+         endingLineNumber = "207"
          landmarkName = "-motionEnded:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EasyToo/UI/SSQ2ViewController.m"
-         timestampString = "393293773.107978"
+         timestampString = "393774811.973889"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "207"
-         endingLineNumber = "207"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
          landmarkName = "-motionEnded:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>

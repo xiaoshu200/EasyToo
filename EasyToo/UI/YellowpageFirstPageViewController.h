@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YellowpageFirstPageViewController : UIViewController{
+@interface YellowpageFirstPageViewController : UIViewController<UITextFieldDelegate>{
     
     UIButton *_btnDish;
     UIButton *_btnRelex;

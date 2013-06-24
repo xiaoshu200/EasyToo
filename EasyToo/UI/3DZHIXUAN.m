@@ -141,13 +141,13 @@
     _toolbarLabel.textAlignment=NSTextAlignmentCenter;
     _toolbarLabel.text  = @"共0注 0元";
     _toolbarLabel.textColor = [UIColor whiteColor];
-    UIBarButtonItem *myButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel];
+    UIBarButtonItem *myButtonItem = [[[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel]autorelease];
     
     [_toolbarArray addObject: myButtonItem]; //添加文本
     // flex item used to separate the left groups items and right grouped items
-	UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+	UIBarButtonItem *flexItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                               target:nil
-                                                                              action:nil];
+                                                                              action:nil]autorelease];
     [_toolbarArray addObject:flexItem];
     [_toolbarArray addObject:[[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(onClickConfirm:)]];
     
@@ -161,32 +161,32 @@
 
 -(void) initLable
 {
-    tips = [[UILabel alloc] initWithFrame:CGRectMake(150, 10, 170, 30)];
+    tips = [[[UILabel alloc] initWithFrame:CGRectMake(150, 10, 170, 30)]autorelease];
     tips.text =  @"至少选择一位数字";
     tips.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips.textAlignment = NSTextAlignmentLeft;  //文本对齐方式
     [self addSubview:tips];
     
-    UILabel *tips2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 30)];
+    UILabel *tips2 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 30)]autorelease];
     tips2.text =  @"摇一摇机选";
     tips2.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips2.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
     [self addSubview:tips2];
     
-    UILabel *tips3 = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 40, 40)];
+    UILabel *tips3 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 30, 40, 40)]autorelease];
     tips3.text =  @"百位";
     tips3.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips3.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
     [self addSubview:tips3];
     
     
-    UILabel *tips4 = [[UILabel alloc] initWithFrame:CGRectMake(0, 140, 40, 40)];
+    UILabel *tips4 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 140, 40, 40)]autorelease];
     tips4.text =  @"十位";
     tips4.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips4.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
     [self addSubview:tips4];
     
-    UILabel *tips5 = [[UILabel alloc] initWithFrame:CGRectMake(0, 260, 40, 40)];
+    UILabel *tips5 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 260, 40, 40)]autorelease];
     tips5.text =  @"个位";
     tips5.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips5.textAlignment = NSTextAlignmentCenter;  //文本对齐方式

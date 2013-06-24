@@ -47,7 +47,7 @@
     [self initLable];
 }
 
-#define MAX_NUM 5
+#define MAX_NUM 10
 -(void) initButton
 {
     
@@ -57,7 +57,7 @@
     while (num<MAX_NUM)
     {
         m_button = [UIButton buttonWithType:UIButtonTypeCustom];
-        m_button.frame = CGRectMake(90+(tag%5)*40, (tag/5)*40+30, 40, 40);
+        m_button.frame = CGRectMake(60+(tag%5)*40, (tag/5)*40+30, 40, 40);
         m_button.tag=tag;
         // Set the font and color
         [m_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -77,77 +77,28 @@
         num++;
         tag++;
     }
-    num = 0;
-    while (num<MAX_NUM)
-    {
-        m_button = [UIButton buttonWithType:UIButtonTypeCustom];
-        m_button.frame = CGRectMake(90+(tag%5)*40, (tag/5)*40+50, 40, 40);
-        m_button.tag=tag;
-        // Set the font and color
-        [m_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [m_button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        
-        m_button.titleLabel.font = [UIFont boldSystemFontOfSize:10.0f];
-        
-        [m_button setTitle:[NSString stringWithFormat:@"%d",num] forState:UIControlStateNormal];
-        
-        [m_button setBackgroundColor:[UIColor clearColor]];
-        [m_button setBackgroundImage:[UIImage imageNamed:@"cp_ssqiu_bg"] forState:UIControlStateNormal ];
-        [m_button setBackgroundImage:[UIImage imageNamed:@"cp_ssqiured_bg"]forState:UIControlStateSelected];
-        
-        [m_button addTarget:self action:@selector(touristEvent:) forControlEvents:UIControlEventTouchUpInside];
-        [_btnArray addObject:m_button];
-        [self addSubview:m_button];
-        num++;
-        tag++;
-    }
-    num = 0;
-    while (num<MAX_NUM)
-    {
-        m_button = [UIButton buttonWithType:UIButtonTypeCustom];
-        m_button.frame = CGRectMake(90+(tag%5)*40, (tag/5)*40+70, 40, 40);
-        m_button.tag=tag;
-        // Set the font and color
-        [m_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [m_button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        
-        m_button.titleLabel.font = [UIFont boldSystemFontOfSize:10.0f];
-        
-        [m_button setTitle:[NSString stringWithFormat:@"%d",num] forState:UIControlStateNormal];
-        
-        [m_button setBackgroundColor:[UIColor clearColor]];
-        [m_button setBackgroundImage:[UIImage imageNamed:@"cp_ssqiu_bg"] forState:UIControlStateNormal ];
-        [m_button setBackgroundImage:[UIImage imageNamed:@"cp_ssqiured_bg"]forState:UIControlStateSelected];
-        
-        [m_button addTarget:self action:@selector(touristEvent:) forControlEvents:UIControlEventTouchUpInside];
-        [_btnArray addObject:m_button];
-        [self addSubview:m_button];
-        num++;
-        tag++;
-    }
-    
 }
 -(void) initToolBar
 {
-    _myToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 345, 320, 44)];
+    _myToolbar = [[[UIToolbar alloc] initWithFrame:CGRectMake(0, 345, 320, 44)]autorelease];
 	_myToolbar.barStyle = UIBarStyleBlackOpaque;
     _toolbarArray = [[NSMutableArray alloc] init];
     [_toolbarArray addObject:[[UIBarButtonItem alloc] initWithTitle:@"清空" style:UIBarButtonItemStyleDone target:self action:@selector(onClickCancle:)]];
     
     
-    _toolbarLabel = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 200.0f, 30.0f)];
+    _toolbarLabel = [[[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 200.0f, 30.0f)]autorelease];
     _toolbarLabel.font=[UIFont systemFontOfSize:16];
     _toolbarLabel.backgroundColor = [UIColor clearColor];
     _toolbarLabel.textAlignment=NSTextAlignmentCenter;
     _toolbarLabel.text  = @"共0注 0元";
     _toolbarLabel.textColor = [UIColor whiteColor];
-    UIBarButtonItem *myButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel];
+    UIBarButtonItem *myButtonItem = [[[UIBarButtonItem alloc]initWithCustomView:_toolbarLabel]autorelease];
     
     [_toolbarArray addObject: myButtonItem]; //添加文本
     // flex item used to separate the left groups items and right grouped items
-	UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+	UIBarButtonItem *flexItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                               target:nil
-                                                                              action:nil];
+                                                                              action:nil]autorelease];
     [_toolbarArray addObject:flexItem];
     [_toolbarArray addObject:[[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(onClickConfirm:)]];
     
@@ -161,37 +112,17 @@
 
 -(void) initLable
 {
-    tips = [[UILabel alloc] initWithFrame:CGRectMake(150, 0, 170, 30)];
+    tips = [[[UILabel alloc] initWithFrame:CGRectMake(150, 0, 170, 30)]autorelease];
     tips.text =  @"至少选择一位数字";
     tips.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips.textAlignment = NSTextAlignmentLeft;  //文本对齐方式
     [self addSubview:tips];
     
-    UILabel *tips2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    UILabel *tips2 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 30)]autorelease];
     tips2.text =  @"摇一摇机选";
     tips2.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
     tips2.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
     [self addSubview:tips2];
-    
-    UILabel *tips3 = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];
-    tips3.text =  @"百位";
-    tips3.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
-    tips3.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
-    [self addSubview:tips3];
-    
-    
-    UILabel *tips4 = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, 40, 40)];
-    tips4.text =  @"十位";
-    tips4.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
-    tips4.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
-    [self addSubview:tips4];
-    
-    UILabel *tips5 = [[UILabel alloc] initWithFrame:CGRectMake(0, 250, 40, 40)];
-    tips5.text =  @"个位";
-    tips5.font = [UIFont boldSystemFontOfSize:14.0f];  //UILabel的字体大小
-    tips5.textAlignment = NSTextAlignmentCenter;  //文本对齐方式
-    [self addSubview:tips5];
-    
     
 }
 

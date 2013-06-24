@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    [self.navigationItem setTitle:@"大乐透"];
     [super viewDidLoad];
     _red_btnArray = [[NSMutableArray alloc]init];
     _blue_btnArray = [[NSMutableArray alloc]init];

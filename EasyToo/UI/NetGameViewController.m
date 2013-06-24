@@ -31,20 +31,20 @@
     [self.navigationItem setTitle:@"网络游戏直充"];
 	// Do any additional setup after loading the view.
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 20, 250, 30)];
+    UILabel *titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(30, 20, 250, 30)]autorelease];
     [titleLabel setText:@"选择游戏和金额"];
     [self.view addSubview:titleLabel];
  
     
     
-    self.gameType = [[UITextField alloc] initWithFrame:CGRectMake(30, 60, 250, 30)];
+    self.gameType = [[[UITextField alloc] initWithFrame:CGRectMake(30, 60, 250, 30)]autorelease];
     [self.gameType setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.gameType];
     self.gameType.delegate = self;
     self.gameType.tag = 1;
     
     // 建立 UIToolbar
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    UIToolbar *toolBar = [[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)]autorelease];
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(cancelPicker)];
     // 把按鈕加進 UIToolbar
     toolBar.items = [NSArray arrayWithObject:right];
@@ -63,7 +63,7 @@
     selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     self.gameType.inputView = selectPicker;
 
-    self.cardType = [[UITextField alloc] initWithFrame:CGRectMake(30, 110, 250, 30)];
+    self.cardType = [[[UITextField alloc] initWithFrame:CGRectMake(30, 110, 250, 30)]autorelease];
     [self.cardType setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.cardType];
     self.cardType.delegate = self;
@@ -72,7 +72,7 @@
     selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     self.cardType.inputView = selectPicker;
     
-    self.cardNum = [[UITextField alloc] initWithFrame:CGRectMake(30, 150, 250, 30)];
+    self.cardNum = [[[UITextField alloc] initWithFrame:CGRectMake(30, 150, 250, 30)] autorelease];
     [self.cardNum setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.cardNum];
     self.cardNum.delegate = self;
@@ -81,7 +81,7 @@
     selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     self.cardNum.inputView = selectPicker;
     
-    self.account = [[UITextField alloc] initWithFrame:CGRectMake(30, 190, 250, 30)];
+    self.account = [[[UITextField alloc] initWithFrame:CGRectMake(30, 190, 250, 30)]autorelease];
     [self.account setBorderStyle:UITextBorderStyleBezel];
     self.account.placeholder = @"充值帐号";
     [self.view addSubview:self.account];
@@ -92,7 +92,7 @@
     self.account.inputView = selectPicker;
     
     
-    self.account2 = [[UITextField alloc] initWithFrame:CGRectMake(30, 230, 250, 30)];
+    self.account2 = [[[UITextField alloc] initWithFrame:CGRectMake(30, 230, 250, 30)]autorelease];
     [self.account2 setBorderStyle:UITextBorderStyleBezel];
     self.account2.placeholder = @"确认充值帐号";
     [self.view addSubview:self.account2];
@@ -137,7 +137,7 @@
     }
     else
     {
-        NetGameConfirmViewController  *confirmView = [[NetGameConfirmViewController alloc] init];
+        NetGameConfirmViewController  *confirmView = [[[NetGameConfirmViewController alloc] init]autorelease];
         [self.navigationController pushViewController:confirmView animated:YES];
     }
 }
@@ -157,11 +157,11 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;
     if (!pickerLabel){
-        pickerLabel = [[UILabel alloc] init];
+        pickerLabel = [[[UILabel alloc] init]autorelease];
         // Setup label properties - frame, font, colors etc
         //adjustsFontSizeToFitWidth property to YES
         pickerLabel.adjustsFontSizeToFitWidth = YES;
-        [pickerLabel setTextAlignment:UITextAlignmentCenter];
+        [pickerLabel setTextAlignment:NSTextAlignmentCenter];
         [pickerLabel setBackgroundColor:[UIColor clearColor]];
         [pickerLabel setFont:[UIFont boldSystemFontOfSize:15]];
     }
