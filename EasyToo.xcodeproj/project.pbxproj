@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		192AE39E17709C3F00958E38 /* FC3D2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 192AE39D17709C3F00958E38 /* FC3D2ViewController.m */; };
+		192AE3BB1777C2ED00958E38 /* 3DZHIXUAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 192AE3BA1777C2EC00958E38 /* 3DZHIXUAN.m */; };
+		192AE3BE1777C30200958E38 /* 3DZUSAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 192AE3BD1777C30200958E38 /* 3DZUSAN.m */; };
+		192AE3C11777C31300958E38 /* 3DZULIU.m in Sources */ = {isa = PBXBuildFile; fileRef = 192AE3C01777C31300958E38 /* 3DZULIU.m */; };
 		1935DD66176B823700D5CC0D /* SSQ2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1935DD65176B823600D5CC0D /* SSQ2ViewController.m */; };
 		19F040FE176C79FF00FC796C /* DaLeTou2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F040FD176C79FE00FC796C /* DaLeTou2ViewController.m */; };
 		19F04100176C96BA00FC796C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F040FF176C96B900FC796C /* AudioToolbox.framework */; };
@@ -388,6 +391,12 @@
 /* Begin PBXFileReference section */
 		192AE39C17709C3F00958E38 /* FC3D2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FC3D2ViewController.h; sourceTree = "<group>"; };
 		192AE39D17709C3F00958E38 /* FC3D2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FC3D2ViewController.m; sourceTree = "<group>"; };
+		192AE3B91777C2EC00958E38 /* 3DZHIXUAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 3DZHIXUAN.h; sourceTree = "<group>"; };
+		192AE3BA1777C2EC00958E38 /* 3DZHIXUAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 3DZHIXUAN.m; sourceTree = "<group>"; };
+		192AE3BC1777C30100958E38 /* 3DZUSAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 3DZUSAN.h; sourceTree = "<group>"; };
+		192AE3BD1777C30200958E38 /* 3DZUSAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 3DZUSAN.m; sourceTree = "<group>"; };
+		192AE3BF1777C31200958E38 /* 3DZULIU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 3DZULIU.h; sourceTree = "<group>"; };
+		192AE3C01777C31300958E38 /* 3DZULIU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = 3DZULIU.m; sourceTree = "<group>"; };
 		1935DD64176B823500D5CC0D /* SSQ2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSQ2ViewController.h; sourceTree = "<group>"; };
 		1935DD65176B823600D5CC0D /* SSQ2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSQ2ViewController.m; sourceTree = "<group>"; };
 		19F040FC176C79FE00FC796C /* DaLeTou2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaLeTou2ViewController.h; sourceTree = "<group>"; };
@@ -1322,6 +1331,12 @@
 				DC37168817674E6E005C1B06 /* ZhongXinViewController.m */,
 				DC37169217674E93005C1B06 /* CaipiaoViewController.h */,
 				DC37169317674E93005C1B06 /* CaipiaoViewController.m */,
+				192AE3B91777C2EC00958E38 /* 3DZHIXUAN.h */,
+				192AE3BA1777C2EC00958E38 /* 3DZHIXUAN.m */,
+				192AE3BC1777C30100958E38 /* 3DZUSAN.h */,
+				192AE3BD1777C30200958E38 /* 3DZUSAN.m */,
+				192AE3BF1777C31200958E38 /* 3DZULIU.h */,
+				192AE3C01777C31300958E38 /* 3DZULIU.m */,
 			);
 			name = Caipiao;
 			sourceTree = "<group>";
@@ -1935,6 +1950,9 @@
 				1935DD66176B823700D5CC0D /* SSQ2ViewController.m in Sources */,
 				19F040FE176C79FF00FC796C /* DaLeTou2ViewController.m in Sources */,
 				192AE39E17709C3F00958E38 /* FC3D2ViewController.m in Sources */,
+				192AE3BB1777C2ED00958E38 /* 3DZHIXUAN.m in Sources */,
+				192AE3BE1777C30200958E38 /* 3DZUSAN.m in Sources */,
+				192AE3C11777C31300958E38 /* 3DZULIU.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

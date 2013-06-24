@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "3DZHIXUAN.h"
+#import "3DZULIU.h"
+#import "3DZUSAN.h"
 @interface FC3D2ViewController : UIViewController
 {
-    UIButton *m_button;
-    UILabel *tips;
+    _DZHIXUAN *_zhixuanView;
+    _DZULIU   *_zuliuView;
+    _DZUSAN   *_zusanView;
 }
 
-@property  (retain,nonatomic) NSMutableArray *toolbarArray;
-@property (retain ,nonatomic) UIToolbar *myToolbar;
-@property (retain,nonatomic) UILabel *toolbarLabel;
-@property (retain,nonatomic) NSMutableArray *btnArray;
 @end

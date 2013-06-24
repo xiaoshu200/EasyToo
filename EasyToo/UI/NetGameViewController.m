@@ -104,7 +104,7 @@
 
     UIButton *nextStep =[UIButton buttonWithType:UIButtonTypeCustom];
     nextStep.frame = CGRectMake(110, 270, 90, 30);
-    [nextStep setBackgroundImage:[UIImage imageNamed:@"next"] forState:UIControlStateNormal];
+    [nextStep setBackgroundImage:[UIImage imageNamed:@"djf_queren"] forState:UIControlStateNormal];
     [self.view addSubview:nextStep];
     [nextStep addTarget:self action:@selector(confirmMessge:) forControlEvents:UIControlEventTouchUpInside];
 }

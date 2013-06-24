@@ -79,8 +79,8 @@
     [self.view addSubview:price];
     
     UIButton *nextStep =[UIButton buttonWithType:UIButtonTypeCustom];
-    nextStep.frame = CGRectMake(100, 230, 90, 30);
-    [nextStep setBackgroundImage:[UIImage imageNamed:@"next"] forState:UIControlStateNormal];
+    nextStep.frame = CGRectMake(100, 200, 80, 30);
+    [nextStep setBackgroundImage:[UIImage imageNamed:@"djf_queren"] forState:UIControlStateNormal];
     [self.view addSubview:nextStep];
     [nextStep addTarget:self action:@selector(confirmMessge:) forControlEvents:UIControlEventTouchUpInside];
 	// Do any additional setup after loading the view.
