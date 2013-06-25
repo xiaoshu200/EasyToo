@@ -25,12 +25,15 @@
 
 -(id) init
 {
-    _firstView = [[[YellowpageFirstPageViewController alloc] init]autorelease];
-    _aroundView = [[[YellowpageAroundViewController alloc] init]autorelease];
-    _favoriteView = [[[YellowpageFavoriteViewController alloc] init]autorelease];
-    _moreView = [[[YellowpageMoreViewController alloc] init]autorelease];
-    
-    return [super init];
+    self = [super init];
+    if(self)
+    {
+        _firstView = [[YellowpageFirstPageViewController alloc] init];
+        _aroundView = [[YellowpageAroundViewController alloc] init];
+        _favoriteView = [[YellowpageFavoriteViewController alloc] init];
+        _moreView = [[YellowpageMoreViewController alloc] init];
+    }
+    return self;
 }
 
 -(void) dealloc

@@ -25,12 +25,15 @@
 
 - (id)init
 {
-    _hotView = [[HotViewController alloc] init];
-    _aroundView = [[AroundViewController alloc] init];
-    _searchView = [[SearchViewController alloc] init];
-    _mineView   = [[MineViewController alloc] init];
-    
-    return [super init];
+    self = [super init];
+    if( self )
+    {
+        _hotView = [[HotViewController alloc] init];
+        _aroundView = [[AroundViewController alloc] init];
+        _searchView = [[SearchViewController alloc] init];
+        _mineView   = [[MineViewController alloc] init];
+    }
+    return self;
 }
 
 - (void)dealloc
@@ -51,7 +54,7 @@
     [self.navigationItem setTitle:@"优惠劵"];
     
     [self initTabBar];
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +68,7 @@
 - (void)initTabBar
 {
     
-    NSArray *controllerArray =[[NSArray alloc]initWithObjects:_hotView, _aroundView, _searchView,_mineView,nil];
+    NSArray *controllerArray =[[[NSArray alloc]initWithObjects:_hotView, _aroundView, _searchView,_mineView,nil]autorelease];
     _tabCtrl = [[UITabBarController alloc] init];
     
     _tabCtrl.viewControllers = controllerArray;
@@ -86,10 +89,10 @@
     
     [_tabCtrl.tabBar setFrame:CGRectMake(0, 400, [DeviceUtil getScreenWidth], 60)];
     [self.view addSubview:_tabCtrl.view];
-     
+    
 }
 
 
 
-     
+
 @end

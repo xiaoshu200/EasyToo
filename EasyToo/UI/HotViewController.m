@@ -39,21 +39,21 @@
 
 - (void)initTopBar
 {
-    UIImageView *topImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [DeviceUtil getScreenWidth], 60)];
+    UIImageView *topImage = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [DeviceUtil getScreenWidth], 60)]autorelease];
     
     [topImage setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:topImage];
     
-    UIImageView *searchBgImage = [[UIImageView alloc] initWithFrame:CGRectMake(25, 20, [DeviceUtil getScreenWidth] - 50, 30)];
+    UIImageView *searchBgImage = [[[UIImageView alloc] initWithFrame:CGRectMake(25, 20, [DeviceUtil getScreenWidth] - 50, 30)]autorelease];
     
     [searchBgImage setImage:[UIImage imageNamed:@"shop_search"]];
     [self.view addSubview:searchBgImage];
     
-    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake([DeviceUtil getScreenWidth] - 82, 2, 25, 25)];
+    UIButton *searchBtn = [[[UIButton alloc] initWithFrame:CGRectMake([DeviceUtil getScreenWidth] - 82, 2, 25, 25)]autorelease];
     [searchBtn setBackgroundImage:[UIImage imageNamed:@"shop_search_button"] forState:UIControlStateNormal];
     [searchBgImage addSubview:searchBtn];
     
-    _SearchTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 25, [DeviceUtil getScreenWidth] - 55, 22)];
+    _SearchTextField = [[[UITextField alloc] initWithFrame:CGRectMake(40, 25, [DeviceUtil getScreenWidth] - 55, 22)]autorelease];
     [_SearchTextField setText:@"请输入商品名称"];
     //    [_SearchTextField setBackgroundColor:[UIColor greenColor]];
     [_SearchTextField setDelegate:self];
@@ -63,7 +63,7 @@
 
 - (void)initTableView
 {
-    BrandView* houseView = [[BrandView alloc] initWithFrame:CGRectMake(0, 60, [DeviceUtil getScreenWidth], 300)];
+    BrandView* houseView = [[[BrandView alloc] initWithFrame:CGRectMake(0, 60, [DeviceUtil getScreenWidth], 300)]autorelease];
     [self.view addSubview:houseView];
 }
 
