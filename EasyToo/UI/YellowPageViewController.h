@@ -10,13 +10,13 @@
 #import "YellowpageFirstPageViewController.h"
 #import "YellowpageAroundViewController.h"
 #import "YellowpageFavoriteViewController.h"
-#import "NIDropDown.h"
+#import "YellowpageMoreViewController.h"
 @interface YellowPageViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate,UIActionSheetDelegate,UITabBarControllerDelegate>
 {
     YellowpageFirstPageViewController *_firstView;
     YellowpageAroundViewController *_aroundView;
     YellowpageFavoriteViewController  *_favoriteView;
-    YellowpageFavoriteViewController  *_unuseView;
+    YellowpageMoreViewController  *_moreView;
     UIActionSheet *_actionSheet;
 
 

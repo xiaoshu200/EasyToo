@@ -51,7 +51,7 @@
 }
 - (void)initTableView
 {
-    UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, [DeviceUtil getScreenWidth], 420 - 40 - 40) style:UITableViewStylePlain];
+    UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [DeviceUtil getScreenWidth], 420 - 40 - 40) style:UITableViewStylePlain];
     [tableView setDelegate:self];
     [tableView setDataSource:self];
     [self.view addSubview:tableView];

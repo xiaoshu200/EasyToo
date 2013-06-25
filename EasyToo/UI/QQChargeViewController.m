@@ -31,7 +31,7 @@
     
     [self.navigationItem setTitle:@"Q币充值"];
     
-    self.qqNumber = [[UITextField alloc] initWithFrame:CGRectMake(30, 40, 250, 30)];
+    self.qqNumber = [[[UITextField alloc] initWithFrame:CGRectMake(30, 40, 250, 30)]autorelease];
     [self.qqNumber setBorderStyle:UITextBorderStyleBezel];
     self.qqNumber.placeholder = @"QQ帐号";
     [self.view addSubview:self.qqNumber];
@@ -39,18 +39,18 @@
     self.qqNumber.keyboardType = UIKeyboardTypeNumberPad;
     self.qqNumber.returnKeyType = UIReturnKeyDone;
     
-    self.qqNumber2 = [[UITextField alloc] initWithFrame:CGRectMake(30, 90, 250, 30)];
+    self.qqNumber2 = [[[UITextField alloc] initWithFrame:CGRectMake(30, 90, 250, 30)]autorelease];
     [self.qqNumber2 setBorderStyle:UITextBorderStyleBezel];
     self.qqNumber2.placeholder = @"确认QQ帐号";
     [self.view addSubview:self.qqNumber2];
     self.qqNumber2.delegate = self;
     self.qqNumber2.keyboardType = UIKeyboardTypeNumberPad;
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(30, 130, 180, 30)];
+    UILabel *label = [[[UILabel alloc]initWithFrame:CGRectMake(30, 130, 180, 30)]autorelease];
     label.text = @"选择面额:";
     [self.view addSubview:label];
     
-    text_value = [[UITextField alloc] initWithFrame:CGRectMake(110, 130, 180, 30)];
+    text_value = [[[UITextField alloc] initWithFrame:CGRectMake(110, 130, 180, 30)]autorelease];
     [text_value setBorderStyle:UITextBorderStyleBezel];
     [text_value setDelegate:self];
     
@@ -63,7 +63,7 @@
     text_value.inputAccessoryView = toolBar;
 
     pickerArray = [[NSArray arrayWithObjects:@"10",@"30",@"50",@"100",@"200",@"250", nil] retain];
-    selectPicker = [[UIPickerView alloc]initWithFrame:CGRectZero];
+    selectPicker = [[[UIPickerView alloc]initWithFrame:CGRectZero]autorelease];
     selectPicker.showsSelectionIndicator = YES;
     selectPicker.frame = CGRectMake(0, 100, 0, 0);
 
@@ -74,12 +74,12 @@
     selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     text_value.inputView = selectPicker;
     
-    UILabel *price = [[UILabel alloc]initWithFrame:CGRectMake(30,170, 100, 30)];
+    UILabel *price = [[[UILabel alloc]initWithFrame:CGRectMake(30,170, 100, 30)]autorelease];
     price.text = @"价格:";
     [self.view addSubview:price];
     
-    UIButton *nextStep =[UIButton buttonWithType:UIButtonTypeCustom];
-    nextStep.frame = CGRectMake(100, 200, 80, 30);
+    UIButton *nextStep =[[UIButton buttonWithType:UIButtonTypeCustom]autorelease];
+    nextStep.frame = CGRectMake(120, 200, 80, 30);
     [nextStep setBackgroundImage:[UIImage imageNamed:@"djf_queren"] forState:UIControlStateNormal];
     [self.view addSubview:nextStep];
     [nextStep addTarget:self action:@selector(confirmMessge:) forControlEvents:UIControlEventTouchUpInside];
@@ -130,7 +130,7 @@
      */
     else
     {
-        ConfirmMessageViewController  *confirmView = [[ConfirmMessageViewController alloc] init];
+        ConfirmMessageViewController  *confirmView = [[[ConfirmMessageViewController alloc] init]autorelease];
         confirmView.account = self.qqNumber.text;
         confirmView.price   = [text_value.text intValue];
 //        NSLog(@"11111 is:%@",self.label_num.textField.text);
@@ -139,36 +139,6 @@
     }
 }
 
-- (void)onBtnClick:(id)sender
-{
-    if (!self.dropDown)
-    {
-        [self addDropDown:sender];
-    }
-    else
-    {
-        [self removeDropDown:sender];
-    }
-}
-
-- (void)addDropDown:(id)button
-{
-    NSArray * arr = [NSArray arrayWithObjects:@"10", @"30", @"50", @"100", @"150", nil];
-    
-    CGFloat f = 200;
-    self.dropDown = [[NIDropDown alloc]showDropDown:button :&f :arr];
-    self.dropDown.delegate = self;
-}
-
-- (void)removeDropDown:(id)button
-{
-    [self.dropDown hideDropDown:button];
-    self.dropDown = nil;
-}
-
-- (void)niDropDownDelegateMethod: (NIDropDown *) sender {
-    self.dropDown = nil;
-}
 
 
 #pragma picker delegate
@@ -185,7 +155,7 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;
     if (!pickerLabel){
-        pickerLabel = [[UILabel alloc] init];
+        pickerLabel = [[[UILabel alloc] init]autorelease];
         // Setup label properties - frame, font, colors etc
         //adjustsFontSizeToFitWidth property to YES
 //        pickerLabel.minimumFontSize =100.;

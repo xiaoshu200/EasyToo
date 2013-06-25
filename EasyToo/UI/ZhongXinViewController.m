@@ -29,10 +29,6 @@
 {
     [super viewDidLoad];
     NSArray *m_array = [NSArray arrayWithObjects:@"我的资料" ,@"我的账户",@"我的订单",@"我的优惠劵",@"我的彩票", nil];
-  //  NSArray *m_array;
-  //  m_array=[NSArray  arrayWithObjects:@"0-asd",@"1-fds",@"2-哈咯",@"3-个人",nil];
-    //数组的长度
-    NSLog(@"数组长度%d",m_array.count);
     printf("m_array count is:%d\n",[m_array count]);
     self.menuList = [NSMutableArray arrayWithArray:m_array];
     //    [self.tableView setEditing:YES animated:YES];
@@ -71,7 +67,6 @@
 {
     // Return the number of rows in the section.
     return 1;
-    return [[UIFont familyNames] count];
     return [self.menuList count];
 }
 
@@ -141,32 +136,8 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    /*
-     SecondViewController *secondView = [[SecondViewController alloc] init];
-     
-     SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-     [self.navigationController pushViewController:secondView animated:YES];
-     */
     [tableView deselectRowAtIndexPath:indexPath animated:YES];//选中后的反显颜色即刻消失
     
-    
-    
-    /*
-     UITableViewCell *oneCell = [tableView cellForRowAtIndexPath: indexPath];
-     if (oneCell.accessoryType == UITableViewCellAccessoryNone) {
-     oneCell.accessoryType = UITableViewCellAccessoryCheckmark;
-     } else
-     oneCell.accessoryType = UITableViewCellAccessoryNone;
-     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-     */
-    /*
-     SecondViewController *secondView = [[SecondViewController alloc] init];
-     [self.navigationController pushViewController:secondView animated:YES];
-     */
-    //    NSString *font = [[UIFont familyNames] objectAtIndex:indexPath.row];
-    //   self.title = font;
-    //  [MINILABEL setText:font];
-    //  [MINILABEL setFont:[UIFont fontWithName:font size:18.0f]];
 }
 
 //改变行的高度

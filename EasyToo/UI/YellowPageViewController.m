@@ -28,7 +28,7 @@
     _firstView = [[[YellowpageFirstPageViewController alloc] init]autorelease];
     _aroundView = [[[YellowpageAroundViewController alloc] init]autorelease];
     _favoriteView = [[[YellowpageFavoriteViewController alloc] init]autorelease];
-    _unuseView = [[[YellowpageFavoriteViewController alloc] init]autorelease];
+    _moreView = [[[YellowpageMoreViewController alloc] init]autorelease];
     
     return [super init];
 }
@@ -64,8 +64,8 @@
 
 - (void)initTabBar
 {
-    NSArray *controllerArray =[[[NSArray alloc]initWithObjects:_firstView, _aroundView, _favoriteView,_unuseView,nil]autorelease];
-    _tabCtrl = [[[UITabBarController alloc] init]autorelease];
+    NSArray *controllerArray =[[[NSArray alloc]initWithObjects:_firstView, _aroundView, _favoriteView,_moreView,nil]autorelease];
+    _tabCtrl = [[UITabBarController alloc] init];
     
     _tabCtrl.viewControllers = controllerArray;
     
@@ -83,7 +83,6 @@
     [[_tabCtrl.tabBar.items objectAtIndex:2] setImage:[UIImage imageNamed:@"collect"]];
     
     [[_tabCtrl.tabBar.items objectAtIndex:3] setTitle:@"更多"];
-    [[_tabCtrl.tabBar.items objectAtIndex:3] setTag:1];
     [[_tabCtrl.tabBar.items objectAtIndex:3] setImage:[UIImage imageNamed:@"more"]];
     [_tabCtrl.tabBar setFrame:CGRectMake(0, 400, [DeviceUtil getScreenWidth], 60)];
     [self.view addSubview:_tabCtrl.view];
@@ -111,6 +110,7 @@
 
 -(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *) viewController
 {
+    /*
     if( viewController.tabBarItem.tag == 1 )
     {
         _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
@@ -121,5 +121,6 @@
         [_actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
         [_actionSheet release];
     }
+     */
 }
 @end
