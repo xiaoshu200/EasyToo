@@ -40,6 +40,7 @@
     self.gameType = [[[UITextField alloc] initWithFrame:CGRectMake(30, 60, 250, 30)]autorelease];
     [self.gameType setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.gameType];
+    self.gameType.placeholder = @"选择游戏种类";
     self.gameType.delegate = self;
     self.gameType.tag = 1;
     
@@ -67,6 +68,7 @@
     [self.cardType setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.cardType];
     self.cardType.delegate = self;
+    self.cardType.placeholder = @"选择卡类";
     self.cardType.tag = 2;
     self.cardType.inputAccessoryView = toolBar;
     selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
@@ -75,6 +77,7 @@
     self.cardNum = [[[UITextField alloc] initWithFrame:CGRectMake(30, 150, 250, 30)] autorelease];
     [self.cardNum setBorderStyle:UITextBorderStyleBezel];
     [self.view addSubview:self.cardNum];
+    self.cardNum.placeholder = @"购买数量";
     self.cardNum.delegate = self;
     self.cardNum.tag = 3;
     self.cardNum.inputAccessoryView = toolBar;
@@ -87,9 +90,9 @@
     [self.view addSubview:self.account];
     self.account.delegate = self;
     self.account.tag = 4;
-    self.account.inputAccessoryView = toolBar;
-    selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    self.account.inputView = selectPicker;
+//    self.account.inputAccessoryView = toolBar;
+//    selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+//    self.account.inputView = selectPicker;
     
     
     self.account2 = [[[UITextField alloc] initWithFrame:CGRectMake(30, 230, 250, 30)]autorelease];
@@ -98,9 +101,9 @@
     [self.view addSubview:self.account2];
     self.account2.delegate = self;
     self.account2.tag = 5;
-    self.account2.inputAccessoryView = toolBar;
-    selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    self.account2.inputView = selectPicker;
+//    self.account2.inputAccessoryView = toolBar;
+ //   selectPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+   // self.account2.inputView = selectPicker;
 
     UIButton *nextStep =[UIButton buttonWithType:UIButtonTypeCustom];
     nextStep.frame = CGRectMake(110, 270, 90, 30);
@@ -138,7 +141,15 @@
     else
     {
         NetGameConfirmViewController  *confirmView = [[[NetGameConfirmViewController alloc] init]autorelease];
+        confirmView.gameType = _gameType.text;
+        confirmView.cardType = _cardType.text;
+        confirmView.cardNum = [_cardNum.text intValue];
+        confirmView.cardPrice = 20;
+        confirmView.totalPrice = 20 * [_cardNum.text intValue];
+        confirmView.account = _account.text;
+
         [self.navigationController pushViewController:confirmView animated:YES];
+        
     }
 }
 
@@ -196,11 +207,6 @@
         self.cardType.text = [pickerArray objectAtIndex:row];
     if( textField.tag == 3)
         self.cardNum.text = [pickerArray objectAtIndex:row];
-    if( textField.tag == 4)
-        self.account.text = [pickerArray objectAtIndex:row];
-    if( textField.tag == 5)
-        self.account2.text = [pickerArray objectAtIndex:row];
-    
 }
 
 // 按下完成鈕後的 method

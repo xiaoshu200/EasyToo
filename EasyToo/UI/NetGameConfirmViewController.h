@@ -10,6 +10,10 @@
 
 @interface NetGameConfirmViewController : UIViewController
 
+@property (retain,nonatomic) NSString *gameType;
+@property (retain,nonatomic) NSString *cardType;
+@property (nonatomic) int cardPrice;
+@property (nonatomic) int cardNum;
+@property (nonatomic) int totalPrice;
 @property (retain,nonatomic) NSString *account;
-@property (nonatomic) int price;
 @end
