@@ -32,6 +32,11 @@
         _aroundView = [[YellowpageAroundViewController alloc] init];
         _favoriteView = [[YellowpageFavoriteViewController alloc] init];
         _moreView = [[YellowpageMoreViewController alloc] init];
+        
+        _firstView.fatherView = self;
+        _aroundView.fatherView = self;
+        _favoriteView.fatherView = self;
+        _moreView.fatherView = self;
     }
     return self;
 }
@@ -84,6 +89,7 @@
     
     [[_tabCtrl.tabBar.items objectAtIndex:2] setTitle:@"收藏"];
     [[_tabCtrl.tabBar.items objectAtIndex:2] setImage:[UIImage imageNamed:@"collect"]];
+    [[_tabCtrl.tabBar.items objectAtIndex:2] setTag:1];
     
     [[_tabCtrl.tabBar.items objectAtIndex:3] setTitle:@"更多"];
     [[_tabCtrl.tabBar.items objectAtIndex:3] setImage:[UIImage imageNamed:@"more"]];
@@ -113,17 +119,11 @@
 
 -(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *) viewController
 {
-    /*
-    if( viewController.tabBarItem.tag == 1 )
-    {
-        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                                  delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil
-                                         otherButtonTitles:@"设置", @"分享", @"反馈",@"关于",nil];
-        _actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-//        _actionSheet.destructiveButtonIndex = 1;	// make the second button red (destructive)
-        [_actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
-        [_actionSheet release];
-    }
-     */
+    
+}
+
+-(void)selectRightAction:(UIButton*)button
+{
+    printf("handle select rightaction here\n");
 }
 @end

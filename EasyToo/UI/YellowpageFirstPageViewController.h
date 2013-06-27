@@ -24,4 +24,6 @@
     NSString* _searchString;
 }
 
+@property (nonatomic, assign) UIViewController* fatherView;
+
 @end

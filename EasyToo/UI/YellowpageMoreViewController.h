@@ -11,5 +11,7 @@
 @interface YellowpageMoreViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,retain) NSMutableArray *menuList;
+@property (nonatomic, assign) UIViewController* fatherView;
+
 
 @end

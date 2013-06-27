@@ -10,4 +10,7 @@
 
 @interface YellowpageAroundViewController : UIViewController
 
+
+@property (nonatomic, assign) UIViewController* fatherView;
+
 @end

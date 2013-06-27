@@ -34,7 +34,15 @@
     [self initButton];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.fatherView.navigationItem setTitle:@"城市黄页"];
 
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    printf("firstpage disappear\n");
+}
 
 -(void) initButton
 {

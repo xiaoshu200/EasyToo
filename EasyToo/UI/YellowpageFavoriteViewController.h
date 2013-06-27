@@ -13,4 +13,7 @@
 
 }
 
+
+@property (nonatomic, assign) UIViewController* fatherView;
+
 @end

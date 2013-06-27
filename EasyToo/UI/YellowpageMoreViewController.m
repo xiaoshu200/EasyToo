@@ -39,6 +39,8 @@
 	NSIndexPath *tableSelection = [self indexPathForSelectedRow];
 	[self deselectRowAtIndexPath:tableSelection animated:NO];
    */
+    [self.fatherView.navigationItem setTitle:@"更多"];
+
 }
 
 

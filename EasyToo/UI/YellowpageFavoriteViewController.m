@@ -28,26 +28,35 @@
     [super viewDidLoad];
     [self initButton];
     [self initTableView];
+    [self.fatherView.navigationItem setTitle:@"收藏"];
+
 	// Do any additional setup after loading the view.
 }
 
--(void)initButton
+-(void)viewWillAppear:(BOOL)animated
 {
     /*
-    UIButton *_btnDish = [[UIButton alloc] initWithFrame:CGRectMake(120, 0, 100, 40)];
-    [_btnDish setBackgroundImage:[UIImage imageNamed:@"buttonup"] forState:UIControlStateNormal];
-    [self.view addSubview:_btnDish];
-    UILabel *label_dish = [[UILabel alloc]initWithFrame:CGRectMake(20,0,60,40)];
-    label_dish.text = @"清除收藏";
-    label_dish.font = [UIFont boldSystemFontOfSize:13];
-    [label_dish setBackgroundColor:[UIColor clearColor]];
-    label_dish.textAlignment = UITextAlignmentCenter;
-    label_dish.adjustsFontSizeToFitWidth = YES;
-    [_btnDish addSubview:label_dish];
+    UIBarButtonItem *rightButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash  target:self action:@selector(selectRightAction:)]autorelease];
      */
+    //rightButton.enabled= TRUE;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"清除收藏"
+                                     style: UIBarButtonItemStyleBordered
+                                     target: self
+                                     action: @selector(done:)];
+    self.fatherView.navigationItem.rightBarButtonItem = rightButton;
+}
+
+-(void ) viewWillDisappear:(BOOL)animated
+{
+    self.fatherView.navigationItem.rightBarButtonItem = nil;
+}
+
+-(void)initButton
+{    
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
     rightButton.enabled= TRUE;
- //   self.navigationItem.rightBarButtonItem = rightButton;
+   self.fatherView.navigationItem.rightBarButtonItem = rightButton;
 }
 - (void)initTableView
 {
@@ -86,6 +95,11 @@
     return cell;
 }
 
+
+-(void)selectRightAction:(UIButton*)button
+{
+    printf("we delete some of the favorites\n");
+}
 #pragma delegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
