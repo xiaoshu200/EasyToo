@@ -35,16 +35,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    /*
-    UIBarButtonItem *rightButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash  target:self action:@selector(selectRightAction:)]autorelease];
-     */
-    //rightButton.enabled= TRUE;
-    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"清除收藏"
-                                     style: UIBarButtonItemStyleBordered
-                                     target: self
-                                     action: @selector(done:)];
-    self.fatherView.navigationItem.rightBarButtonItem = rightButton;
+    [self initButton];
 }
 
 -(void ) viewWillDisappear:(BOOL)animated
@@ -53,11 +44,12 @@
 }
 
 -(void)initButton
-{    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
-    rightButton.enabled= TRUE;
-   self.fatherView.navigationItem.rightBarButtonItem = rightButton;
-}
+{
+    UIBarButtonItem *rightButton = [[[UIBarButtonItem alloc] initWithTitle:@"清除收藏"
+                                                                    style: UIBarButtonItemStyleBordered
+                                                                   target: self
+                                                                   action: @selector(selectRightAction:)]autorelease];
+    self.fatherView.navigationItem.rightBarButtonItem = rightButton;}
 - (void)initTableView
 {
     UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [DeviceUtil getScreenWidth], 420 - 40 - 40) style:UITableViewStylePlain];
