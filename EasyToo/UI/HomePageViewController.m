@@ -75,11 +75,11 @@
 
 - (void)initIconArray
 {
-    _iconNameArray = [[NSArray alloc] initWithObjects:@"优惠券下载", @"彩票投注", @"城市黄页", @"Q币充值", @"网络游戏直充", @"最新咨询", @"购物商城", @"电费代缴", @"车务代缴", @"景点票购买", @"演艺票购买", @"机票预定", @"手机话费充值", @"电影票", @"个人中心", nil];
+    _iconNameArray = [[NSArray alloc] initWithObjects:@"Q币充值", nil];
     
-    _iconImageNameArray = [[NSArray alloc] initWithObjects:@"coupon_logo", @"lottery_logo", @"cityyellow_logo", @"qq", @"geme", @"news_100", @"shop_logo", @"shuidianfei", @"car_logo", @"traveltickets_logo", @"concerttickets_logo", @"airline_line", @"concerttickets_logo", @"user_center", @"user_center", nil];
+    _iconImageNameArray = [[NSArray alloc] initWithObjects:@"qq", nil];
     
-    _iconViewCtrlArray = [[NSArray alloc] initWithObjects:@"CouponViewController", @"CaipiaoViewController", @"YellowPageViewController", @"QQChargeViewController", @"NetGameViewController", @"NewsViewController", @"ShoppingViewController", @"ElectrolysisViewController", @"CarBusinessViewController", @"ToristTicketViewController", @"ConcertViewController", @"PlainViewController", @"MobileChargeViewController", @"MovieViewController", @"LoginViewController", nil];
+    _iconViewCtrlArray = [[NSArray alloc] initWithObjects:@"QQChargeViewController", nil];
 }
 
 - (void)initPageCtrl
