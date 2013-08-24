@@ -10,7 +10,6 @@
 #import "MMGridView.h"
 #import "MMGridViewDefaultCell.h"
 #import "DeviceUtil.h"
-#import "ShoppingViewController.h"
 
 @interface HomePageViewController ()
 
