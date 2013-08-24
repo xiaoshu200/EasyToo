@@ -54,6 +54,7 @@
 {
     [self initIconArray];
     return [super init];
+    printf("test github\n");
 }
 
 - (void)dealloc
