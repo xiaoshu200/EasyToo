@@ -1,0 +1,21 @@
+//
+//  NetworkResponse.h
+//  HKWeibo
+//
+//  Created by Guangcheng Sun on 7/26/12.
+//  Copyright (c) 2012 Tencent. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NetworkResponse : NSObject
+{
+    int _statusCode;
+    NSDictionary* _headerDict;
+    
+}
++ (NetworkResponse*)responseWithCode:(int)code headers:(NSDictionary*)headers;
+- (NSDictionary*) allHeaderFields;
+- (int)statusCode;
++ (NSString*)localizedStringForStatusCode:(int)statusCode;
+@end

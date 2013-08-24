@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/ipc/ipc_i18nhant_rep/!svn/ver/15140/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network
+END
+NetworkEngineDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkEngineDelegate.h
+END
+NetworkOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkOperation.h
+END
+NetworkResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkResponse.m
+END
+NetworkEngine.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkEngine.h
+END
+NetworkOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/ipc/ipc_i18nhant_rep/!svn/ver/14420/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkOperation.m
+END
+NetworkEngineProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkEngineProtocol.h
+END
+NetworkRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/ipc/ipc_i18nhant_rep/!svn/ver/14521/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkRequest.h
+END
+NetworkEngine.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/ipc/ipc_i18nhant_rep/!svn/ver/14521/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkEngine.m
+END
+NetworkRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/ipc/ipc_i18nhant_rep/!svn/ver/15140/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkRequest.m
+END
+NetworkResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/ipc/ipc_i18nhant_rep/!svn/ver/13764/Mobile_HK_Weibo_proj/trunk/client/IOS/HKWeibo/FoundationComponent/Network/NetworkResponse.h
+END

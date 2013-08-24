@@ -1,0 +1,45 @@
+//
+//  NetworkResponse.m
+//  HKWeibo
+//
+//  Created by Guangcheng Sun on 7/26/12.
+//  Copyright (c) 2012 Tencent. All rights reserved.
+//
+
+#import "NetworkResponse.h"
+
+@implementation NetworkResponse
+- (NetworkResponse*)initWithCode:(int)code headers:(NSDictionary*)headers
+{
+    self = [super init];
+    if(self)
+    {
+        _statusCode = code;
+        _headerDict = [[NSDictionary dictionaryWithDictionary:headers] retain];        
+    }
+
+    return self;
+}
+- (void)dealloc
+{
+    ReleaseAndNil(_headerDict);
+    [super dealloc];
+}
++ (NetworkResponse*)responseWithCode:(int)code headers:(NSDictionary*)headers
+{
+    NetworkResponse* res = [[[NetworkResponse alloc] initWithCode:code headers:headers] autorelease];
+    return res;
+}
+- (NSDictionary*) allHeaderFields
+{
+    return _headerDict;
+}
+- (int)statusCode
+{
+    return _statusCode;
+}
++ (NSString*)localizedStringForStatusCode:(int)statusCode
+{
+    return [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
+}
+@end

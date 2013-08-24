@@ -30,6 +30,7 @@
 #import "NSObject+SBJson.h"
 #import "SBJsonWriter.h"
 #import "SBJsonParser.h"
+#import "Logger.h"
 
 @implementation NSObject (NSObject_SBJsonWriting)
 
