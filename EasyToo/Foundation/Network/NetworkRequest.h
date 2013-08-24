@@ -1,0 +1,57 @@
+
+#import <Foundation/Foundation.h>
+#import "NetWorkEngineDelegate.h"
+
+typedef NSInteger NETWORK_REQUEST_PRIORITY;
+enum{
+    HIGH_NETWORK_REQUEST_PRIORITY = 0,
+    NORMAL_NETWORK_REQUEST_PRIORITY = 1,
+    LOW_NETWORK_REQUEST_PRIORITY = 2
+};
+
+typedef NSInteger PostFormat;
+enum{
+    MultipartFormDataPostFormat = 0,
+    URLEncodedPostFormat = 1
+};
+
+#define HTTP_POST @"POST"
+#define HTTP_GET @"GET"
+
+@interface NetworkRequest : NSObject<NSCopying>
+
+@property (nonatomic,copy) NSString* url;
+@property (nonatomic,retain) NSString* method;
+@property (nonatomic,retain) NSMutableDictionary* dataDict;
+@property (nonatomic,assign) PostFormat postFormat; 
+@property (nonatomic,retain) NSMutableArray* binaryDataArray;
+@property (nonatomic,retain) NSMutableArray* fileDataArray;
+@property (nonatomic,retain) NSMutableDictionary* cookieDict;
+@property (nonatomic,retain) NSMutableDictionary* headerDict;
+@property (nonatomic,assign) NETWORK_REQUEST_PRIORITY priority;
+@property (nonatomic,assign) int protocolVersion;
+@property (nonatomic,assign) BOOL needProgress;
+
+@property (nonatomic,retain) id<NetworkEngineDelegate> delegate;
+
+@property (nonatomic,readonly,retain) NSURLConnection* urlConnection;
+
+//默认data,cookie,header为nil］，priority＝ NORMAL_NETWORK_REQUEST_PRIORITY
+- (id)initWithUrl:(NSString*)url method:(NSString*)method delegate:(id<NetworkEngineDelegate>)delegate version:(int)version;
+- (id)initWithUrl:(NSString*)url method:(NSString*)method priority:(NETWORK_REQUEST_PRIORITY)priority delegate:(id<NetworkEngineDelegate>)delegate version:(int)version;
+- (id)initWithUrl:(NSString*)url method:(NSString*)method data:(NSDictionary*)data delegate:(id<NetworkEngineDelegate>)delegate version:(int)version;
+- (id)initWithUrl:(NSString*)url method:(NSString*)method data:(NSDictionary*)data priority:(NETWORK_REQUEST_PRIORITY)priority delegate:(id<NetworkEngineDelegate>)delegate version:(int)version;
+
+
+- (NSURLConnection*)getCurrentConnection;
+- (NSURLConnection*)makeURLConnectionWithDelegate:(id)urlConnectionDelegate;
+
+- (void)setStringData:(NSString*)data withKey:(NSString*)key;
+- (void)setBinaryData:(NSData*)data withKey:(NSString*)key;
+- (void)setBinaryData:(NSData*)data withFilename:(NSString*)filename withContentType:(NSString*)contentType withKey:(NSString*)key;
+- (void)setFileData:(NSString*)filepath withKey:(NSString*)key;
+- (void)setFileData:(NSString*)filepath withFilename:(NSString*)filename withContentType:(NSString*)contentType withKey:(NSString*)key;
+
+- (void)setHeader:(NSString*)value key:(NSString*)key;
+- (void)setCookie:(NSString*)value key:(NSString*)key;
+@end

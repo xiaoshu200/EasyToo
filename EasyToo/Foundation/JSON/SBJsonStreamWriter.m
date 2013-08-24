@@ -32,6 +32,7 @@
 
 #import "SBJsonStreamWriter.h"
 #import "SBJsonStreamWriterState.h"
+#import "Logger.h"
 
 static NSNumber *kNotANumber;
 static NSNumber *kTrue;

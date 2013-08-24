@@ -1,0 +1,15 @@
+//
+//  NetworkEngineProtocol.h
+//  HKWeibo
+//
+//  Created by grayson on 12-6-28.
+//  Copyright (c) 2012年 Tencent. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+@class NetworkRequest;
+@protocol NetworkEngineProtocol <NSObject> 
+@required
+- (BOOL) addNetworkRequest:(NetworkRequest*)request;
+- (void) cancelNetworkRequest:(NetworkRequest*)request;
+@end

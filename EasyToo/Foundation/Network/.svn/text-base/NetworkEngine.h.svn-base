@@ -1,0 +1,18 @@
+//
+//  NetworkEngine.h
+//  HKWeibo
+//
+//  Created by grayson on 12-6-28.
+//  Copyright (c) 2012年 Tencent. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "NetworkEngineProtocol.h"
+#import "NetworkEngineDelegate.h"
+@interface NetworkEngine : NSObject<NetworkEngineProtocol,NetworkEngineDelegate>
+
+@property (nonatomic,retain) NSOperationQueue* operationQueue;
+@property (atomic,retain) NSMutableDictionary* request2OperationDict;
+- (id)initWithMaxConcurrent:(int)maxConcurrent timeoutBySecond:(int)timeout;
+
+@end
